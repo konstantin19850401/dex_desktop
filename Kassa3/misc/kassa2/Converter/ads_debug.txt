@@ -1,0 +1,8 @@
+DB: c:\bases\kassa2
+SQL: insert into "clients.adt" (c_name, c_group) values ('Клиент1', 1)
+Class: EADSDatabaseError, Msg: Error 7200:  AQE Error:  State = S0000;   NativeError = 2124;  [Extended Systems][Advantage SQL Engine]Invalid operand for operator: <assignment>
+==== End Debug Session - 12.02.2003 - 12:48:14 ====
+=== Start Debug Session - 12.02.2003 - 12:48:35 ===
+==== End Debug Session - 12.02.2003 - 12:49:47 ====
+=== Start Debug Session - 13.02.2003 - 15:45:48 ===
+==== End Debug Session - 13.02.2003 - 15:48:29 ====

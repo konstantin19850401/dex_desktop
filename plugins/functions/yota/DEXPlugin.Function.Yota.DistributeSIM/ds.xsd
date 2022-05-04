@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="ds" targetNamespace="http://tempuri.org/ds.xsd" xmlns:mstns="http://tempuri.org/ds.xsd" xmlns="http://tempuri.org/ds.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="ds" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="ds" msprop:Generator_DataSetName="ds" msprop:EnableTableAdapterManager="true">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="sim" msprop:Generator_UserTableName="sim" msprop:Generator_RowDeletedName="simRowDeleted" msprop:Generator_RowChangedName="simRowChanged" msprop:Generator_RowClassName="simRow" msprop:Generator_RowChangingName="simRowChanging" msprop:Generator_RowEvArgName="simRowChangeEvent" msprop:Generator_RowEvHandlerName="simRowChangeEventHandler" msprop:Generator_TableClassName="simDataTable" msprop:Generator_TableVarName="tablesim" msprop:Generator_RowDeletingName="simRowDeleting" msprop:Generator_TablePropName="sim">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="msisdn" msprop:Generator_UserColumnName="msisdn" msprop:Generator_ColumnVarNameInTable="columnmsisdn" msprop:Generator_ColumnPropNameInRow="msisdn" msprop:Generator_ColumnPropNameInTable="msisdnColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="icc" msprop:Generator_UserColumnName="icc" msprop:Generator_ColumnVarNameInTable="columnicc" msprop:Generator_ColumnPropNameInRow="icc" msprop:Generator_ColumnPropNameInTable="iccColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="party" msprop:Generator_UserColumnName="party" msprop:Generator_ColumnVarNameInTable="columnparty" msprop:Generator_ColumnPropNameInRow="party" msprop:Generator_ColumnPropNameInTable="partyColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="plan" msprop:Generator_UserColumnName="plan" msprop:Generator_ColumnVarNameInTable="columnplan" msprop:Generator_ColumnPropNameInRow="plan" msprop:Generator_ColumnPropNameInTable="planColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="cdate" msprop:Generator_UserColumnName="cdate" msprop:Generator_ColumnVarNameInTable="columncdate" msprop:Generator_ColumnPropNameInRow="cdate" msprop:Generator_ColumnPropNameInTable="cdateColumn" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

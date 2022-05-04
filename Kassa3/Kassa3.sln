@@ -1,0 +1,60 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Kassa3", "Kassa3.csproj", "{1B140502-5E1F-4405-B4E5-0FDD5BDEA808}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		BeeLineKBR Debug|Any CPU = BeeLineKBR Debug|Any CPU
+		BeeLineKBR Release|Any CPU = BeeLineKBR Release|Any CPU
+		BeeLineKCR Debug|Any CPU = BeeLineKCR Debug|Any CPU
+		BeeLineKCR Release|Any CPU = BeeLineKCR Release|Any CPU
+		BeeLineRD Debug|Any CPU = BeeLineRD Debug|Any CPU
+		BeeLineRD Release|Any CPU = BeeLineRD Release|Any CPU
+		BeeLineSTS Debug|Any CPU = BeeLineSTS Debug|Any CPU
+		BeeLineSTS Release|Any CPU = BeeLineSTS Release|Any CPU
+		Debug|Any CPU = Debug|Any CPU
+		Megafon Debug|Any CPU = Megafon Debug|Any CPU
+		Megafon Release|Any CPU = Megafon Release|Any CPU
+		MTS Debug|Any CPU = MTS Debug|Any CPU
+		MTS Release|Any CPU = MTS Release|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1B140502-5E1F-4405-B4E5-0FDD5BDEA808}.BeeLineKBR Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1B140502-5E1F-4405-B4E5-0FDD5BDEA808}.BeeLineKBR Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1B140502-5E1F-4405-B4E5-0FDD5BDEA808}.BeeLineKBR Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1B140502-5E1F-4405-B4E5-0FDD5BDEA808}.BeeLineKBR Release|Any CPU.Build.0 = Release|Any CPU
+		{1B140502-5E1F-4405-B4E5-0FDD5BDEA808}.BeeLineKCR Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1B140502-5E1F-4405-B4E5-0FDD5BDEA808}.BeeLineKCR Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1B140502-5E1F-4405-B4E5-0FDD5BDEA808}.BeeLineKCR Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1B140502-5E1F-4405-B4E5-0FDD5BDEA808}.BeeLineKCR Release|Any CPU.Build.0 = Release|Any CPU
+		{1B140502-5E1F-4405-B4E5-0FDD5BDEA808}.BeeLineRD Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1B140502-5E1F-4405-B4E5-0FDD5BDEA808}.BeeLineRD Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1B140502-5E1F-4405-B4E5-0FDD5BDEA808}.BeeLineRD Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1B140502-5E1F-4405-B4E5-0FDD5BDEA808}.BeeLineRD Release|Any CPU.Build.0 = Release|Any CPU
+		{1B140502-5E1F-4405-B4E5-0FDD5BDEA808}.BeeLineSTS Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1B140502-5E1F-4405-B4E5-0FDD5BDEA808}.BeeLineSTS Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1B140502-5E1F-4405-B4E5-0FDD5BDEA808}.BeeLineSTS Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1B140502-5E1F-4405-B4E5-0FDD5BDEA808}.BeeLineSTS Release|Any CPU.Build.0 = Release|Any CPU
+		{1B140502-5E1F-4405-B4E5-0FDD5BDEA808}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1B140502-5E1F-4405-B4E5-0FDD5BDEA808}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1B140502-5E1F-4405-B4E5-0FDD5BDEA808}.Megafon Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1B140502-5E1F-4405-B4E5-0FDD5BDEA808}.Megafon Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1B140502-5E1F-4405-B4E5-0FDD5BDEA808}.Megafon Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1B140502-5E1F-4405-B4E5-0FDD5BDEA808}.Megafon Release|Any CPU.Build.0 = Release|Any CPU
+		{1B140502-5E1F-4405-B4E5-0FDD5BDEA808}.MTS Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1B140502-5E1F-4405-B4E5-0FDD5BDEA808}.MTS Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1B140502-5E1F-4405-B4E5-0FDD5BDEA808}.MTS Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1B140502-5E1F-4405-B4E5-0FDD5BDEA808}.MTS Release|Any CPU.Build.0 = Release|Any CPU
+		{1B140502-5E1F-4405-B4E5-0FDD5BDEA808}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1B140502-5E1F-4405-B4E5-0FDD5BDEA808}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(SubversionScc) = preSolution
+		Svn-Managed = True
+		Manager = AnkhSVN - Subversion Support for Visual Studio
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,41 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DEXUpdater", "DEXUpdater.csproj", "{823BBC83-41B0-41BF-96B3-10E7D3173C12}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DEXExtendLib", "..\libs\DEXExtendLib\DEXExtendLib.csproj", "{1D549913-A9AC-45AD-A25B-FD7772E6184E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Megafon Debug|Any CPU = Megafon Debug|Any CPU
+		Megafon Release|Any CPU = Megafon Release|Any CPU
+		MEGAFON_RELEASE|Any CPU = MEGAFON_RELEASE|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{823BBC83-41B0-41BF-96B3-10E7D3173C12}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{823BBC83-41B0-41BF-96B3-10E7D3173C12}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{823BBC83-41B0-41BF-96B3-10E7D3173C12}.Megafon Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{823BBC83-41B0-41BF-96B3-10E7D3173C12}.Megafon Debug|Any CPU.Build.0 = Debug|Any CPU
+		{823BBC83-41B0-41BF-96B3-10E7D3173C12}.Megafon Release|Any CPU.ActiveCfg = Release|Any CPU
+		{823BBC83-41B0-41BF-96B3-10E7D3173C12}.Megafon Release|Any CPU.Build.0 = Release|Any CPU
+		{823BBC83-41B0-41BF-96B3-10E7D3173C12}.MEGAFON_RELEASE|Any CPU.ActiveCfg = Release|Any CPU
+		{823BBC83-41B0-41BF-96B3-10E7D3173C12}.MEGAFON_RELEASE|Any CPU.Build.0 = Release|Any CPU
+		{823BBC83-41B0-41BF-96B3-10E7D3173C12}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{823BBC83-41B0-41BF-96B3-10E7D3173C12}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1D549913-A9AC-45AD-A25B-FD7772E6184E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1D549913-A9AC-45AD-A25B-FD7772E6184E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1D549913-A9AC-45AD-A25B-FD7772E6184E}.Megafon Debug|Any CPU.ActiveCfg = Megafon Debug|Any CPU
+		{1D549913-A9AC-45AD-A25B-FD7772E6184E}.Megafon Debug|Any CPU.Build.0 = Megafon Debug|Any CPU
+		{1D549913-A9AC-45AD-A25B-FD7772E6184E}.Megafon Release|Any CPU.ActiveCfg = Megafon Release|Any CPU
+		{1D549913-A9AC-45AD-A25B-FD7772E6184E}.Megafon Release|Any CPU.Build.0 = Megafon Release|Any CPU
+		{1D549913-A9AC-45AD-A25B-FD7772E6184E}.MEGAFON_RELEASE|Any CPU.ActiveCfg = MEGAFON_RELEASE|Any CPU
+		{1D549913-A9AC-45AD-A25B-FD7772E6184E}.MEGAFON_RELEASE|Any CPU.Build.0 = MEGAFON_RELEASE|Any CPU
+		{1D549913-A9AC-45AD-A25B-FD7772E6184E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1D549913-A9AC-45AD-A25B-FD7772E6184E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DEXPlugin.Dictionary.Test", "DEXPlugin.Dictionary.Test\DEXPlugin.Dictionary.Test.csproj", "{382F5376-E27B-4385-9FEF-C3FC713FBB5F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DEXOffice", "..\DEXOffice\DEXOffice\DEXOffice.csproj", "{99C7E59D-E4D9-429B-81D7-D07ED4E290B2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DEXExtendLib", "..\DEXExtendLib\DEXExtendLib\DEXExtendLib.csproj", "{1D549913-A9AC-45AD-A25B-FD7772E6184E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{382F5376-E27B-4385-9FEF-C3FC713FBB5F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{382F5376-E27B-4385-9FEF-C3FC713FBB5F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{382F5376-E27B-4385-9FEF-C3FC713FBB5F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{382F5376-E27B-4385-9FEF-C3FC713FBB5F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{99C7E59D-E4D9-429B-81D7-D07ED4E290B2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{99C7E59D-E4D9-429B-81D7-D07ED4E290B2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{99C7E59D-E4D9-429B-81D7-D07ED4E290B2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{99C7E59D-E4D9-429B-81D7-D07ED4E290B2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1D549913-A9AC-45AD-A25B-FD7772E6184E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1D549913-A9AC-45AD-A25B-FD7772E6184E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1D549913-A9AC-45AD-A25B-FD7772E6184E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1D549913-A9AC-45AD-A25B-FD7772E6184E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

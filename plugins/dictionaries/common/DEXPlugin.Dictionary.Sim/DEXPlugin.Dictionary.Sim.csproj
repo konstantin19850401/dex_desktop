@@ -1,0 +1,291 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{2F6B0ED1-728F-4A8E-8C9D-83709B74645C}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DEXPlugin.Dictionary.Sim</RootNamespace>
+    <AssemblyName>DEXPlugin.Dictionary.Sim</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation />
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Megafon Release|AnyCPU' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>none</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Megafon Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'BeeLineSTS Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>..\..\..\..\..\!BUILD\beeline_sts_debug\plugins\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;STS</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'BeeLineSTS Release|AnyCPU' ">
+    <OutputPath>..\..\..\..\..\!BUILD\beeline_sts_release\plugins\</OutputPath>
+    <DefineConstants>TRACE;STS</DefineConstants>
+    <Optimize>true</Optimize>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'MTS Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>..\..\..\..\..\!BUILD\mts_debug\plugins\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'MTS Release|AnyCPU' ">
+    <OutputPath>..\..\..\..\..\!BUILD\mts_release\plugins\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Yota Debug|AnyCPU'">
+    <OutputPath>bin\Yota Debug\</OutputPath>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Yota Release|AnyCPU'">
+    <OutputPath>..\..\..\..\..\!BUILD\yota_release\plugins\</OutputPath>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="MySql.Data">
+      <HintPath>..\..\..\..\libs\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.XML" />
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Dictionary.cs" />
+    <Compile Include="ds.cs">
+      <DependentUpon>ds.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ds.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ds.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FAddToPartyForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FAddToPartyForm.Designer.cs">
+      <DependentUpon>FAddToPartyForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FBalanceMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FBalanceMain.Designer.cs">
+      <DependentUpon>FBalanceMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FChangeBalance.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FChangeBalance.Designer.cs">
+      <DependentUpon>FChangeBalance.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FChangePartyIdForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FChangePartyIdForm.Designer.cs">
+      <DependentUpon>FChangePartyIdForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FPlansEd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FPlansEd.Designer.cs">
+      <DependentUpon>FPlansEd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FPlansMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FPlansMain.Designer.cs">
+      <DependentUpon>FPlansMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FSimEd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FSimEd.Designer.cs">
+      <DependentUpon>FSimEd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FSimImport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FSimImport.Designer.cs">
+      <DependentUpon>FSimImport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FSimSrcView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FSimSrcView.Designer.cs">
+      <DependentUpon>FSimSrcView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FSimUnitsEd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FSimUnitsEd.Designer.cs">
+      <DependentUpon>FSimUnitsEd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="FSimMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FSimMain.Designer.cs">
+      <DependentUpon>FSimMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="SimPartyCpClipInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SimPartyCpClipInfo.Designer.cs">
+      <DependentUpon>SimPartyCpClipInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FChangeSimType.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FChangeSimType.Designer.cs">
+      <DependentUpon>FChangeSimType.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\..\libs\DEXExtendLib\DEXExtendLib.csproj">
+      <Project>{1D549913-A9AC-45AD-A25B-FD7772E6184E}</Project>
+      <Name>DEXExtendLib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\libs\DEXSIM\DEXSIM.csproj">
+      <Project>{ABADCEAE-A641-4595-B995-0F77A8FA9AA6}</Project>
+      <Name>DEXSIM</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="FPlansEd.resx">
+      <DependentUpon>FPlansEd.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FPlansMain.resx">
+      <DependentUpon>FPlansMain.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FSimEd.resx">
+      <DependentUpon>FSimEd.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FSimImport.resx">
+      <DependentUpon>FSimImport.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FSimMain.resx">
+      <DependentUpon>FSimMain.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FSimSrcView.resx">
+      <DependentUpon>FSimSrcView.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FSimUnitsEd.resx">
+      <DependentUpon>FSimUnitsEd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ostatki.rdlc" />
+    <EmbeddedResource Include="OstatkiRegions.rdlc" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FChangeSimType.resx">
+      <DependentUpon>FChangeSimType.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ARROW1U.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ds.xsc">
+      <DependentUpon>ds.xsd</DependentUpon>
+    </None>
+    <None Include="ds.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ds.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="ds.xss">
+      <DependentUpon>ds.xsd</DependentUpon>
+    </None>
+    <None Include="Resources\ARROW1D.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="FAddToPartyForm.resx">
+      <DependentUpon>FAddToPartyForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FBalanceMain.resx">
+      <DependentUpon>FBalanceMain.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FChangeBalance.resx">
+      <DependentUpon>FChangeBalance.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FChangePartyIdForm.resx">
+      <DependentUpon>FChangePartyIdForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="icon.bmp" />
+    <EmbeddedResource Include="SimPartyCpClipInfo.resx">
+      <DependentUpon>SimPartyCpClipInfo.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,50 @@
+=== Start Debug Session - 16.07.2008 - 09:51:22 ===
+==== End Debug Session - 16.07.2008 - 09:51:56 ====
+=== Start Debug Session - 16.07.2008 - 09:54:21 ===
+=== Start Debug Session - 16.07.2008 - 09:55:19 ===
+==== End Debug Session - 16.07.2008 - 09:55:41 ====
+=== Start Debug Session - 16.07.2008 - 09:56:32 ===
+==== End Debug Session - 16.07.2008 - 09:56:59 ====
+=== Start Debug Session - 17.07.2008 - 10:02:19 ===
+==== End Debug Session - 17.07.2008 - 10:02:31 ====
+=== Start Debug Session - 20.08.2008 - 09:51:37 ===
+==== End Debug Session - 20.08.2008 - 09:51:46 ====
+=== Start Debug Session - 20.08.2008 - 09:52:04 ===
+DB: E:\D7\Projects\kassa2\data
+SQL: select ka.id kaid, op_id, prim, k_date, srcacc, dstacc, srctype, dsttype, sn, sb, su, sc, dn, db, du, dc, bmk_id, op.name opname, optype, user_cr, user_ch, r_cr from "kassa.adt" ka, "operations.adt" op where (op.id=ka.op_id) and (ka.id=4)
+Class: EADSDatabaseError, Msg: Error 7200:  AQE Error:  State = S0000;   NativeError = 2137;  [Extended Systems][Advantage SQL Engine]Column found in multiple tables: r_cr -- Location of error in the SQL statement is: 157
+==== End Debug Session - 20.08.2008 - 09:52:15 ====
+=== Start Debug Session - 20.08.2008 - 09:54:04 ===
+DB: E:\D7\Projects\kassa2\data
+SQL: select ka.id kaid, op_id, prim, k_date, srcacc, dstacc, srctype, dsttype, sn, sb, su, sc, dn, db, du, dc, bmk_id, op.name opname, optype, user_cr, user_ch, r_cr from "kassa.adt" ka, "operations.adt" op where (op.id=ka.op_id) and (ka.id=4)
+Class: EADSDatabaseError, Msg: Error 7200:  AQE Error:  State = S0000;   NativeError = 2137;  [Extended Systems][Advantage SQL Engine]Column found in multiple tables: r_cr -- Location of error in the SQL statement is: 157
+==== End Debug Session - 20.08.2008 - 09:54:15 ====
+=== Start Debug Session - 20.08.2008 - 09:55:56 ===
+DB: E:\D7\Projects\kassa2\data
+SQL: select ka.id kaid, op_id, prim, k_date, srcacc, dstacc, srctype, dsttype, sn, sb, su, sc, dn, db, du, dc, bmk_id, op.name opname, optype, user_cr, user_ch, r_cr from "kassa.adt" ka, "operations.adt" op where (op.id=ka.op_id) and (ka.id=4)
+Class: EADSDatabaseError, Msg: Error 7200:  AQE Error:  State = S0000;   NativeError = 2137;  [Extended Systems][Advantage SQL Engine]Column found in multiple tables: r_cr -- Location of error in the SQL statement is: 157
+==== End Debug Session - 20.08.2008 - 09:56:05 ====
+=== Start Debug Session - 26.08.2008 - 09:39:17 ===
+==== End Debug Session - 26.08.2008 - 09:39:35 ====
+=== Start Debug Session - 27.08.2008 - 10:36:20 ===
+==== End Debug Session - 27.08.2008 - 10:36:25 ====
+=== Start Debug Session - 03.06.2009 - 9:47:47 ===
+==== End Debug Session - 03.06.2009 - 09:48:06 ====
+=== Start Debug Session - 19.12.2009 - 11:43:08 ===
+==== End Debug Session - 19.12.2009 - 11:43:29 ====
+=== Start Debug Session - 19.05.2011 - 10:07:01 ===
+DB: D:\DEX_NET\src\Kassa3\misc\kassa2\data
+SQL: select * from "users.adt" order by username
+Class: EADSDatabaseError, Msg: qusr: Error 7200:  AQE Error:  State = HY000;   NativeError = 5175;  [iAnywhere Solutions][Advantage SQL][ASA] Error 5175:  The index file was created with a different collation sequence than is currently being used. Table name: users.adt
+DB: D:\DEX_NET\src\Kassa3\misc\kassa2\data
+SQL: insert into "users.adt" (username, password, active, userlist) values ('Встроенная учётная запись', '', true, true)
+Class: EADSDatabaseError, Msg: Error 7200:  AQE Error:  State = HY000;   NativeError = 5175;  [iAnywhere Solutions][Advantage SQL][ASA] Error 5175:  The index file was created with a different collation sequence than is currently being used. Table name: users.adt
+SetBlobStr
+DBDIR: D:\DEX_NET\src\Kassa3\misc\kassa2\data
+TBL: users.adt
+IXFLD:id
+BLOBFLD: permits
+Class: EADSDatabaseError, Msg: Error 5175:  The index file was created with a different collation sequence than is currently being used.
+DB: D:\DEX_NET\src\Kassa3\misc\kassa2\data
+SQL: select * from "users.adt" order by username
+Class: EADSDatabaseError, Msg: qusr: Error 7200:  AQE Error:  State = HY000;   NativeError = 5175;  [iAnywhere Solutions][Advantage SQL][ASA] Error 5175:  The index file was created with a different collation sequence than is currently being used. Table name: users.adt

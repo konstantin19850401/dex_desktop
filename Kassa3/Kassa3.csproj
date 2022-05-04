@@ -1,0 +1,485 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{1B140502-5E1F-4405-B4E5-0FDD5BDEA808}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Kassa3</RootNamespace>
+    <AssemblyName>Kassa3</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ApplicationIcon>Kassa.ico</ApplicationIcon>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.1.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>none</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>none</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <AllowedReferenceRelatedFileExtensions>
+      <!-- Prevent default XML and PDB files copied to output in RELEASE. 
+           Only *.allowedextension files will be included, which doesn't exist in my case.
+       -->
+      .allowedextension
+    </AllowedReferenceRelatedFileExtensions>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.Data.v10.2, Version=10.2.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\libs\DevExpress 10\DevExpress.Data.v10.2.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Utils.v10.2, Version=10.2.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraBars.v10.2, Version=10.2.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraEditors.v10.2, Version=10.2.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraGrid.v10.2, Version=10.2.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraLayout.v10.2, Version=10.2.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraPrinting.v10.2, Version=10.2.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraTreeList.v10.2, Version=10.2.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="MySql.Data, Version=6.0.4.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.SQLite">
+      <HintPath>..\libs\sqlite-netFx20-static-binary-bundle-Win32-2005-1.0.99.0\System.Data.SQLite.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization.Formatters.Soap" />
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AccEdForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AccEdForm.Designer.cs">
+      <DependentUpon>AccEdForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AccountItem.cs" />
+    <Compile Include="BalanceCalc.cs" />
+    <Compile Include="BalanceForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BalanceForm.Designer.cs">
+      <DependentUpon>BalanceForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BalancePropForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BalancePropForm.Designer.cs">
+      <DependentUpon>BalancePropForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DateEdit.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Db.cs" />
+    <Compile Include="ClientEdForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClientEdForm.Designer.cs">
+      <DependentUpon>ClientEdForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ClientItem.cs" />
+    <Compile Include="ClientsDicForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClientsDicForm.Designer.cs">
+      <DependentUpon>ClientsDicForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Crypt.cs" />
+    <Compile Include="CurrDicForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CurrDicForm.Designer.cs">
+      <DependentUpon>CurrDicForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CurrTypeEdForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CurrTypeEdForm.Designer.cs">
+      <DependentUpon>CurrTypeEdForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CurrValueEdForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CurrValueEdForm.Designer.cs">
+      <DependentUpon>CurrValueEdForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataFlow.cs" />
+    <Compile Include="DocumentParser.cs" />
+    <Compile Include="FirmAccDicForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FirmAccDicForm.Designer.cs">
+      <DependentUpon>FirmAccDicForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FirmEdForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FirmEdForm.Designer.cs">
+      <DependentUpon>FirmEdForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FirmForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FirmForm.Designer.cs">
+      <DependentUpon>FirmForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FirmItem.cs" />
+    <Compile Include="ExchangeImportForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ExchangeImportForm.Designer.cs">
+      <DependentUpon>ExchangeImportForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NewSqliteDbForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NewSqliteDbForm.Designer.cs">
+      <DependentUpon>NewSqliteDbForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReclogForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReclogForm.Designer.cs">
+      <DependentUpon>ReclogForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SettingsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SettingsForm.Designer.cs">
+      <DependentUpon>SettingsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MatchForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MatchForm.Designer.cs">
+      <DependentUpon>MatchForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RuleEditForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RuleEditForm.Designer.cs">
+      <DependentUpon>RuleEditForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ImportRule.cs" />
+    <Compile Include="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NetLoginForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NetLoginForm.Designer.cs">
+      <DependentUpon>NetLoginForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OpEdForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OpEdForm.Designer.cs">
+      <DependentUpon>OpEdForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OpRuleEdForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OpRuleEdForm.Designer.cs">
+      <DependentUpon>OpRuleEdForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OpsDicForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OpsDicForm.Designer.cs">
+      <DependentUpon>OpsDicForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PrimForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PrimForm.Designer.cs">
+      <DependentUpon>PrimForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="WaitMessage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WaitMessage.designer.cs">
+      <DependentUpon>WaitMessage.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="AccEdForm.resx">
+      <DependentUpon>AccEdForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BalanceForm.resx">
+      <DependentUpon>BalanceForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BalancePropForm.resx">
+      <DependentUpon>BalancePropForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClientEdForm.resx">
+      <DependentUpon>ClientEdForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClientsDicForm.resx">
+      <DependentUpon>ClientsDicForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CurrDicForm.resx">
+      <DependentUpon>CurrDicForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CurrTypeEdForm.resx">
+      <DependentUpon>CurrTypeEdForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CurrValueEdForm.resx">
+      <DependentUpon>CurrValueEdForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FirmAccDicForm.resx">
+      <DependentUpon>FirmAccDicForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FirmEdForm.resx">
+      <DependentUpon>FirmEdForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FirmForm.resx">
+      <DependentUpon>FirmForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ExchangeImportForm.resx">
+      <DependentUpon>ExchangeImportForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NewSqliteDbForm.resx">
+      <DependentUpon>NewSqliteDbForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="ReclogForm.resx">
+      <DependentUpon>ReclogForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SettingsForm.resx">
+      <DependentUpon>SettingsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MatchForm.resx">
+      <DependentUpon>MatchForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RuleEditForm.resx">
+      <DependentUpon>RuleEditForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NetLoginForm.resx">
+      <DependentUpon>NetLoginForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OpEdForm.resx">
+      <DependentUpon>OpEdForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OpRuleEdForm.resx">
+      <DependentUpon>OpRuleEdForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OpsDicForm.resx">
+      <DependentUpon>OpsDicForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PrimForm.resx">
+      <DependentUpon>PrimForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RecForm.resx">
+      <DependentUpon>RecForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TextViewer.resx">
+      <DependentUpon>TextViewer.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserEdForm.resx">
+      <DependentUpon>UserEdForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UsersDicForm.resx">
+      <DependentUpon>UsersDicForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="WaitMessage.resx">
+      <DependentUpon>WaitMessage.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="RecForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RecForm.Designer.cs">
+      <DependentUpon>RecForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SimpleXML.cs" />
+    <Compile Include="StringObjTagItem.cs" />
+    <Compile Include="StringTagItem.cs" />
+    <Compile Include="TableMonitor.cs" />
+    <Compile Include="TextViewer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TextViewer.Designer.cs">
+      <DependentUpon>TextViewer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tools.cs" />
+    <Compile Include="UserEdForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserEdForm.Designer.cs">
+      <DependentUpon>UserEdForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserInfo.cs" />
+    <Compile Include="UsersDicForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UsersDicForm.Designer.cs">
+      <DependentUpon>UsersDicForm.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="misc\VS2008ImageLibrary\Actions\pngformat\ZoomHS.png" />
+    <Content Include="Kassa.ico" />
+    <Content Include="zametki.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

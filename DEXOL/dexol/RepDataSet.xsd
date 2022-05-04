@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="RepDataSet" targetNamespace="http://tempuri.org/RepDataSet.xsd" xmlns:mstns="http://tempuri.org/RepDataSet.xsd" xmlns="http://tempuri.org/RepDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="RepDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="RepDataSet" msprop:Generator_DataSetName="RepDataSet" msprop:EnableTableAdapterManager="true">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="dtDocsReport" msprop:Generator_UserTableName="dtDocsReport" msprop:Generator_RowDeletedName="dtDocsReportRowDeleted" msprop:Generator_RowChangedName="dtDocsReportRowChanged" msprop:Generator_RowClassName="dtDocsReportRow" msprop:Generator_RowChangingName="dtDocsReportRowChanging" msprop:Generator_RowEvArgName="dtDocsReportRowChangeEvent" msprop:Generator_RowEvHandlerName="dtDocsReportRowChangeEventHandler" msprop:Generator_TableClassName="dtDocsReportDataTable" msprop:Generator_TableVarName="tabledtDocsReport" msprop:Generator_RowDeletingName="dtDocsReportRowDeleting" msprop:Generator_TablePropName="dtDocsReport">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="digest" msprop:Generator_UserColumnName="digest" msprop:Generator_ColumnVarNameInTable="columndigest" msprop:Generator_ColumnPropNameInRow="digest" msprop:Generator_ColumnPropNameInTable="digestColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="doctype" msprop:Generator_UserColumnName="doctype" msprop:Generator_ColumnVarNameInTable="columndoctype" msprop:Generator_ColumnPropNameInRow="doctype" msprop:Generator_ColumnPropNameInTable="doctypeColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="docnum" msprop:Generator_UserColumnName="docnum" msprop:Generator_ColumnPropNameInRow="docnum" msprop:Generator_ColumnVarNameInTable="columndocnum" msprop:Generator_ColumnPropNameInTable="docnumColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="status" msprop:Generator_UserColumnName="status" msprop:Generator_ColumnPropNameInRow="status" msprop:Generator_ColumnVarNameInTable="columnstatus" msprop:Generator_ColumnPropNameInTable="statusColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="docdate" msprop:Generator_UserColumnName="docdate" msprop:Generator_ColumnVarNameInTable="columndocdate" msprop:Generator_ColumnPropNameInRow="docdate" msprop:Generator_ColumnPropNameInTable="docdateColumn" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
