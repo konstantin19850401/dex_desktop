@@ -1430,7 +1430,7 @@ namespace DEXPlugin.Dictionary.Mega.Sim
         }
 
         DataTable dtOstatki;
-        bool doDetailedOstatki, doFsSeparated, doReturned, doDetailedNull, doRegions;
+        bool doDetailedOstatki, doFsSeparated, doReturned, doDetailedNull, doRegions, doOnlyActiveUnits;
         int ostatkiCnt;
 
         public string PrepareOstatki(IWaitMessageEventArgs wmea)
@@ -1520,7 +1520,15 @@ namespace DEXPlugin.Dictionary.Mega.Sim
                     // если нужно показать нулевые остатки, запросим список отделений и добавим те, что отсутствуют в созданном справочнике, поставив им 0
                     if (doDetailedNull)
                     {
-                        sql = "SELECT * FROM units";
+                        if (doOnlyActiveUnits) // если только активные
+                        {
+                            sql = "SELECT * FROM units WHERE status = '1'";
+                        }
+                        else
+                        {
+                            sql = "SELECT * FROM units";
+                        }
+                        //sql = "SELECT * FROM units";
                         DataTable dtUnits = d.getQuery(sql);
                         if (dtUnits != null && dtUnits.Rows.Count > 0)
                         {
@@ -1591,6 +1599,9 @@ namespace DEXPlugin.Dictionary.Mega.Sim
                 MessageBoxButtons.YesNo) == DialogResult.Yes;
 
             doRegions = MessageBox.Show("Отображать регион отделения?", "Подтверждение",
+                MessageBoxButtons.YesNo) == DialogResult.Yes;
+
+            doOnlyActiveUnits = MessageBox.Show("Отображать только активные отделения?", "Подтверждение",
                 MessageBoxButtons.YesNo) == DialogResult.Yes;
 
             string ret = WaitMessage.Execute(new WaitMessageEvent(PrepareOstatki));

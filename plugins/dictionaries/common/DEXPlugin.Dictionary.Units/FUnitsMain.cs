@@ -184,6 +184,7 @@ namespace DEXPlugin.Dictionary.Units
         {
             if (e.Button == MouseButtons.Right) 
             {
+                
                 String id = ((DataRowView)bs.Current).Row["id"].ToString();
                 bool status = !bool.Parse(((DataRowView)bs.Current).Row["status"].ToString());
 
@@ -191,8 +192,8 @@ namespace DEXPlugin.Dictionary.Units
                 ((IDEXData)toolbox).runQuery("update `units` set status = {0} where id = {1}", status ? 1 : 0, id);
 
                 ((DataRowView)bs.Current).Row["status"] = status;
-
-                //RefreshUnits();
+               
+             
             }
         }
     }
