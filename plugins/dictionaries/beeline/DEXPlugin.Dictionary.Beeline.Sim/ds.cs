@@ -1,7 +1,8 @@
 ﻿namespace DEXPlugin.Dictionary.Beeline.Sim
 {
-    
-    
-    public partial class ds {
+
+
+    public partial class ds
+    {
     }
 }

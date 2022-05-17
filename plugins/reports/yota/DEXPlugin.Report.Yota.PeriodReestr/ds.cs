@@ -1,8 +1,9 @@
 ﻿namespace DEXPlugin.Report.Yota.PeriodReestr
 {
-    
-    
-    public partial class ds {
+
+
+    public partial class ds
+    {
     }
 }
 namespace DEXPlugin.Report.Yota.PeriodReestr.dsTableAdapters

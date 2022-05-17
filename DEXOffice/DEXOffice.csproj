@@ -10,7 +10,7 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>DEXOffice</RootNamespace>
     <AssemblyName>DEXOffice</AssemblyName>
-    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <StartupObject>DEXOffice.Program</StartupObject>
     <ApplicationIcon>DEXIcon1.ico</ApplicationIcon>
@@ -108,34 +108,15 @@
     <ApplicationManifest>Properties\app.manifest</ApplicationManifest>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="BarcodeLib, Version=1.0.0.22, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\!BUILD\beeline_sts_debug\BarcodeLib.dll</HintPath>
-    </Reference>
-    <Reference Include="IronBarCode">
-      <HintPath>..\libs\IronBarCode.dll</HintPath>
-    </Reference>
-    <Reference Include="itext.forms">
-      <HintPath>..\libs\itext.forms.dll</HintPath>
-    </Reference>
-    <Reference Include="itext.io">
-      <HintPath>..\libs\itext.io.dll</HintPath>
-    </Reference>
-    <Reference Include="itext.kernel">
-      <HintPath>..\libs\itext.kernel.dll</HintPath>
-    </Reference>
-    <Reference Include="itext.layout">
-      <HintPath>..\libs\itext.layout.dll</HintPath>
-    </Reference>
     <Reference Include="Microsoft.ReportViewer.Common, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <Private>True</Private>
     </Reference>
     <Reference Include="Microsoft.ReportViewer.WinForms, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <Private>True</Private>
     </Reference>
-    <Reference Include="MySql.Data, Version=6.7.4.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+    <Reference Include="MySql.Data, Version=6.9.6.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <Private>True</Private>
+      <HintPath>..\libs\mySql\MySql.Data.dll</HintPath>
     </Reference>
     <Reference Include="Newtonsoft.Json, Version=4.5.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
@@ -283,12 +264,6 @@
     </None>
     <None Include="ClassDiagram1.cd" />
     <None Include="DEXOffice_TemporaryKey.pfx" />
-    <None Include="mtsOutReplacementForm.pdf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Include="mtsReplacementForm.pdf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
     <None Include="OfficinaSerifC_Book.otf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
@@ -324,9 +299,6 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="DEXIcon1.ico" />
-    <Content Include="SumatraPDF.exe">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include="Microsoft.Net.Client.3.5">

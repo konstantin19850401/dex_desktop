@@ -1,8 +1,9 @@
 ﻿namespace DEXPlugin.Dictionary.Mega.Sim
 {
-    
-    
-    public partial class ds {
+
+
+    public partial class ds
+    {
         partial class ostatkiDataTable
         {
         }

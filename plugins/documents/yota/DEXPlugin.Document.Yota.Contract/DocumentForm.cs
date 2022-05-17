@@ -97,7 +97,7 @@ namespace DEXPlugin.Document.Yota.Contract
             }
             catch (Exception)
             {
-                string ssss = "";
+               
             }
             
 
@@ -1933,7 +1933,7 @@ namespace DEXPlugin.Document.Yota.Contract
                 {
                     MessageBox.Show("К данному договору не прикреплен скан документа");
                 }
-                string sss = "dfv";
+              
             }
             catch (Exception) { }
         }

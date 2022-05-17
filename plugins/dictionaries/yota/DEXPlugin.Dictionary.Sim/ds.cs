@@ -1,7 +1,8 @@
 ﻿namespace DEXPlugin.Dictionary.Yota.Sim
 {
-    
-    
-    public partial class ds {
+
+
+    public partial class ds
+    {
     }
 }

@@ -15,14 +15,6 @@ using MySql.Data.MySqlClient;
 using DEXExtendLib;
 using System.Text.RegularExpressions;
 
-using BarcodeLib;
-using iText.Forms;
-using iText.Forms.Fields;
-using iText.Kernel.Pdf;
-using iText.Kernel.Font;
-using iText.IO.Image;
-using iText.Layout;
-
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 

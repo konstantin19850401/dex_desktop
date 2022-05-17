@@ -1,6 +1,8 @@
-﻿namespace DEXPlugin.Report.Yota.DocDates {
-    
-    
-    public partial class ds {
+﻿namespace DEXPlugin.Report.Yota.DocDates
+{
+
+
+    public partial class ds
+    {
     }
 }
