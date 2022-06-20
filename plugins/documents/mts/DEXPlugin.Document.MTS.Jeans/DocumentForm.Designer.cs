@@ -117,6 +117,8 @@
             this.lbFizDocExp = new System.Windows.Forms.Label();
             this.deFizDocExp = new DEXExtendLib.DateEdit();
             this.chDulIsCorrect = new System.Windows.Forms.CheckBox();
+            this.label33 = new System.Windows.Forms.Label();
+            this.tb_balance = new System.Windows.Forms.TextBox();
             this.panel2.SuspendLayout();
             this.gbScan.SuspendLayout();
             this.SuspendLayout();
@@ -707,7 +709,7 @@
             // 
             this.tbCodeWord.Location = new System.Drawing.Point(269, 65);
             this.tbCodeWord.Name = "tbCodeWord";
-            this.tbCodeWord.Size = new System.Drawing.Size(274, 20);
+            this.tbCodeWord.Size = new System.Drawing.Size(154, 20);
             this.tbCodeWord.TabIndex = 12;
             this.tbCodeWord.Enter += new System.EventHandler(this.cbDocUnit_Enter);
             this.tbCodeWord.KeyDown += new System.Windows.Forms.KeyEventHandler(this.cbDocUnit_KeyDown);
@@ -1033,11 +1035,30 @@
             this.chDulIsCorrect.Text = "Данные ДУЛ верны";
             this.chDulIsCorrect.UseVisualStyleBackColor = true;
             // 
+            // label33
+            // 
+            this.label33.AutoSize = true;
+            this.label33.Location = new System.Drawing.Point(473, 49);
+            this.label33.Name = "label33";
+            this.label33.Size = new System.Drawing.Size(67, 13);
+            this.label33.TabIndex = 352;
+            this.label33.Text = "Баланс сим";
+            // 
+            // tb_balance
+            // 
+            this.tb_balance.Enabled = false;
+            this.tb_balance.Location = new System.Drawing.Point(429, 65);
+            this.tb_balance.Name = "tb_balance";
+            this.tb_balance.Size = new System.Drawing.Size(111, 20);
+            this.tb_balance.TabIndex = 353;
+            // 
             // DocumentForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(556, 626);
+            this.Controls.Add(this.tb_balance);
+            this.Controls.Add(this.label33);
             this.Controls.Add(this.chDulIsCorrect);
             this.Controls.Add(this.deFizDocExp);
             this.Controls.Add(this.lbFizDocExp);
@@ -1223,5 +1244,7 @@
         private System.Windows.Forms.CheckBox chDulIsCorrect;
         public DEXExtendLib.DateEdit deJournalDate;
         public DEXExtendLib.DateEdit deDocDate;
+        private System.Windows.Forms.Label label33;
+        private System.Windows.Forms.TextBox tb_balance;
     }
 }

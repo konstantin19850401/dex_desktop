@@ -866,6 +866,13 @@ namespace DEXPlugin.Document.MTS.Jeans
                             else lOwner.Text = "?";
                             if (dicsim.ContainsKey("region_title")) lOwner.Text += ", " + dicsim["region_title"];
                             if (dicsim.ContainsKey("owner_status")) lOwner.Text += ", " + ((bool.Parse(dicsim["owner_status"])) ? "[Активен]" : "[Заблокирован]");
+                            if (dicsim.ContainsKey("balance")) tb_balance.Text = dicsim["balance"];
+
+                            // баланс сим
+                            //IDEXData d = (IDEXData)toolbox;
+                            //DataTable dt = d.getQuery("select kind from `mts_units_dp` where uid = " + fdocument.documentUnitID + " and dpcode = '" + d.EscapeString(mtbAssignedDPCode.Text) + "'");
+
+                            //if (dt != null && dt.Rows.Count > 0 && Convert.ToInt32(dt.Rows[0]["kind"]) == 1)
 
                             try
                             {
