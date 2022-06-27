@@ -475,12 +475,7 @@ namespace DEXPlugin.Function.MTS.Autodoc
             dealerInfo.Clear();
             bool lockToUnitId = cbLockToUnitId.Checked;
 
-            if (cbUnit.SelectedIndex == 1)
-            {
-
-            }
-            else 
-            {
+           
                 try
                 {
                     wmea.textMessage = "Построение статистического списка";
@@ -683,7 +678,7 @@ namespace DEXPlugin.Function.MTS.Autodoc
                 {
                     return "Внутренняя ошибка <" + ex.Message + ">";
                 }
-            }
+            
 
             // 30.12.13 /
 

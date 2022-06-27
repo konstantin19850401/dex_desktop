@@ -281,7 +281,7 @@ namespace DEXPlugin.Document.MTS.Jeans
                     tbFizBirthPlace.Text = xml.GetNodeByPath("FizBirthPlace", true).Text;
                     StringTagItem.SelectByTag(cbFizDocCountry, xml.GetNodeByPath("FizDocCountry", true).Text, true);
 
-                    if (xml.GetNodeByPath("FizDocCitizen", true).Text != "")
+                    if (xml.GetNodeByPath("FizDocCitizen", false) != null && xml.GetNodeByPath("FizDocCitizen", true).Text != "")
                     {
                         StringTagItem.SelectByTag(cbFizDocСitizen, xml.GetNodeByPath("FizDocCitizen", true).Attributes["tag"], true);
                     }

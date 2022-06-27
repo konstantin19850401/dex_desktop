@@ -80,6 +80,21 @@
             this.tsbDeleteCard = new System.Windows.Forms.ToolStripButton();
             this.pSim = new System.Windows.Forms.Panel();
             this.dgvSim = new System.Windows.Forms.DataGridView();
+            this.status = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.msisdn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.icc = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fs = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dynamic = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.owner_id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.date_in = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.date_own = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.date_sold = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.party_id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.region_id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.plan_id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.balance = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.comment = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.auto_distr = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cmsSim = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.tsmiPartyFolder = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiChangePartyId = new System.Windows.Forms.ToolStripMenuItem();
@@ -106,21 +121,7 @@
             this.lNoSim = new System.Windows.Forms.Label();
             this.tsmiPlan = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiRegion = new System.Windows.Forms.ToolStripMenuItem();
-            this.status = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.msisdn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.icc = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.fs = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dynamic = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.owner_id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.date_in = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.date_own = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.date_sold = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.party_id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.region_id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.plan_id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.balance = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.comment = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.auto_distr = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.button1 = new System.Windows.Forms.Button();
             this.msMain.SuspendLayout();
             this.pFilter.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -217,6 +218,7 @@
             // pFilter
             // 
             this.pFilter.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pFilter.Controls.Add(this.button1);
             this.pFilter.Controls.Add(this.cbDateFilter);
             this.pFilter.Controls.Add(this.deDateSold);
             this.pFilter.Controls.Add(this.clbParties);
@@ -529,7 +531,7 @@
             this.tsStatus.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.tsslItemsCount,
             this.tsslSelectedCount});
-            this.tsStatus.Location = new System.Drawing.Point(0, 457);
+            this.tsStatus.Location = new System.Drawing.Point(0, 576);
             this.tsStatus.Name = "tsStatus";
             this.tsStatus.Size = new System.Drawing.Size(1290, 22);
             this.tsStatus.TabIndex = 2;
@@ -555,7 +557,7 @@
             this.tsbNewSim,
             this.tsbEditSim,
             this.tsbDeleteCard});
-            this.tsTools.Location = new System.Drawing.Point(0, 432);
+            this.tsTools.Location = new System.Drawing.Point(0, 551);
             this.tsTools.Name = "tsTools";
             this.tsTools.Size = new System.Drawing.Size(1290, 25);
             this.tsTools.TabIndex = 3;
@@ -627,7 +629,7 @@
             this.pSim.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pSim.Location = new System.Drawing.Point(0, 127);
             this.pSim.Name = "pSim";
-            this.pSim.Size = new System.Drawing.Size(1290, 305);
+            this.pSim.Size = new System.Drawing.Size(1290, 424);
             this.pSim.TabIndex = 4;
             // 
             // dgvSim
@@ -661,13 +663,104 @@
             this.dgvSim.ReadOnly = true;
             this.dgvSim.RowHeadersVisible = false;
             this.dgvSim.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvSim.Size = new System.Drawing.Size(1290, 305);
+            this.dgvSim.Size = new System.Drawing.Size(1290, 424);
             this.dgvSim.TabIndex = 1;
             this.dgvSim.VirtualMode = true;
             this.dgvSim.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dgvSim_CellFormatting);
             this.dgvSim.SelectionChanged += new System.EventHandler(this.dgvSim_SelectionChanged);
             this.dgvSim.KeyDown += new System.Windows.Forms.KeyEventHandler(this.dgvSim_KeyDown);
             this.dgvSim.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.dgvSim_MouseDoubleClick);
+            // 
+            // status
+            // 
+            this.status.HeaderText = "Статус";
+            this.status.Name = "status";
+            this.status.ReadOnly = true;
+            // 
+            // msisdn
+            // 
+            this.msisdn.HeaderText = "MSISDN";
+            this.msisdn.Name = "msisdn";
+            this.msisdn.ReadOnly = true;
+            // 
+            // icc
+            // 
+            this.icc.HeaderText = "ICC";
+            this.icc.Name = "icc";
+            this.icc.ReadOnly = true;
+            // 
+            // fs
+            // 
+            this.fs.DataPropertyName = "fs";
+            this.fs.HeaderText = "ФС";
+            this.fs.Name = "fs";
+            this.fs.ReadOnly = true;
+            // 
+            // dynamic
+            // 
+            this.dynamic.HeaderText = "Динамическая";
+            this.dynamic.Name = "dynamic";
+            this.dynamic.ReadOnly = true;
+            // 
+            // owner_id
+            // 
+            this.owner_id.HeaderText = "Отделение";
+            this.owner_id.Name = "owner_id";
+            this.owner_id.ReadOnly = true;
+            // 
+            // date_in
+            // 
+            this.date_in.HeaderText = "Поступление";
+            this.date_in.Name = "date_in";
+            this.date_in.ReadOnly = true;
+            // 
+            // date_own
+            // 
+            this.date_own.HeaderText = "Выдача";
+            this.date_own.Name = "date_own";
+            this.date_own.ReadOnly = true;
+            // 
+            // date_sold
+            // 
+            this.date_sold.HeaderText = "Продажа";
+            this.date_sold.Name = "date_sold";
+            this.date_sold.ReadOnly = true;
+            // 
+            // party_id
+            // 
+            this.party_id.HeaderText = "Код партии";
+            this.party_id.Name = "party_id";
+            this.party_id.ReadOnly = true;
+            // 
+            // region_id
+            // 
+            this.region_id.HeaderText = "Регион";
+            this.region_id.Name = "region_id";
+            this.region_id.ReadOnly = true;
+            // 
+            // plan_id
+            // 
+            this.plan_id.HeaderText = "ТП";
+            this.plan_id.Name = "plan_id";
+            this.plan_id.ReadOnly = true;
+            // 
+            // balance
+            // 
+            this.balance.HeaderText = "Баланс";
+            this.balance.Name = "balance";
+            this.balance.ReadOnly = true;
+            // 
+            // comment
+            // 
+            this.comment.HeaderText = "Примечание";
+            this.comment.Name = "comment";
+            this.comment.ReadOnly = true;
+            // 
+            // auto_distr
+            // 
+            this.auto_distr.HeaderText = "Автоматическое распределение";
+            this.auto_distr.Name = "auto_distr";
+            this.auto_distr.ReadOnly = true;
             // 
             // cmsSim
             // 
@@ -854,7 +947,7 @@
             this.lNoSim.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lNoSim.Location = new System.Drawing.Point(0, 0);
             this.lNoSim.Name = "lNoSim";
-            this.lNoSim.Size = new System.Drawing.Size(1290, 305);
+            this.lNoSim.Size = new System.Drawing.Size(1290, 424);
             this.lNoSim.TabIndex = 0;
             this.lNoSim.Text = "Нет записей";
             this.lNoSim.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -873,102 +966,21 @@
             this.tsmiRegion.Text = "Регион 1";
             this.tsmiRegion.Click += new System.EventHandler(this.tsmiRegion_Click);
             // 
-            // status
+            // button1
             // 
-            this.status.HeaderText = "Статус";
-            this.status.Name = "status";
-            this.status.ReadOnly = true;
-            // 
-            // msisdn
-            // 
-            this.msisdn.HeaderText = "MSISDN";
-            this.msisdn.Name = "msisdn";
-            this.msisdn.ReadOnly = true;
-            // 
-            // icc
-            // 
-            this.icc.HeaderText = "ICC";
-            this.icc.Name = "icc";
-            this.icc.ReadOnly = true;
-            // 
-            // fs
-            // 
-            this.fs.DataPropertyName = "fs";
-            this.fs.HeaderText = "ФС";
-            this.fs.Name = "fs";
-            this.fs.ReadOnly = true;
-            // 
-            // dynamic
-            // 
-            this.dynamic.HeaderText = "Динамическая";
-            this.dynamic.Name = "dynamic";
-            this.dynamic.ReadOnly = true;
-            // 
-            // owner_id
-            // 
-            this.owner_id.HeaderText = "Отделение";
-            this.owner_id.Name = "owner_id";
-            this.owner_id.ReadOnly = true;
-            // 
-            // date_in
-            // 
-            this.date_in.HeaderText = "Поступление";
-            this.date_in.Name = "date_in";
-            this.date_in.ReadOnly = true;
-            // 
-            // date_own
-            // 
-            this.date_own.HeaderText = "Выдача";
-            this.date_own.Name = "date_own";
-            this.date_own.ReadOnly = true;
-            // 
-            // date_sold
-            // 
-            this.date_sold.HeaderText = "Продажа";
-            this.date_sold.Name = "date_sold";
-            this.date_sold.ReadOnly = true;
-            // 
-            // party_id
-            // 
-            this.party_id.HeaderText = "Код партии";
-            this.party_id.Name = "party_id";
-            this.party_id.ReadOnly = true;
-            // 
-            // region_id
-            // 
-            this.region_id.HeaderText = "Регион";
-            this.region_id.Name = "region_id";
-            this.region_id.ReadOnly = true;
-            // 
-            // plan_id
-            // 
-            this.plan_id.HeaderText = "ТП";
-            this.plan_id.Name = "plan_id";
-            this.plan_id.ReadOnly = true;
-            // 
-            // balance
-            // 
-            this.balance.HeaderText = "Баланс";
-            this.balance.Name = "balance";
-            this.balance.ReadOnly = true;
-            // 
-            // comment
-            // 
-            this.comment.HeaderText = "Примечание";
-            this.comment.Name = "comment";
-            this.comment.ReadOnly = true;
-            // 
-            // auto_distr
-            // 
-            this.auto_distr.HeaderText = "Автоматическое распределение";
-            this.auto_distr.Name = "auto_distr";
-            this.auto_distr.ReadOnly = true;
+            this.button1.Location = new System.Drawing.Point(1056, 51);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(90, 37);
+            this.button1.TabIndex = 24;
+            this.button1.Text = "Использовать набор";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // FSimMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1290, 479);
+            this.ClientSize = new System.Drawing.Size(1290, 598);
             this.Controls.Add(this.pSim);
             this.Controls.Add(this.tsTools);
             this.Controls.Add(this.tsStatus);
@@ -1096,5 +1108,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn balance;
         private System.Windows.Forms.DataGridViewTextBoxColumn comment;
         private System.Windows.Forms.DataGridViewTextBoxColumn auto_distr;
+        private System.Windows.Forms.Button button1;
     }
 }

@@ -135,6 +135,7 @@ namespace DEXPlugin.Dictionary.Beeline.Sim
                 {
                     StringObjTagItem sti = new StringObjTagItem(row["party_id"].ToString(), Convert.ToInt32(row["party_id"]));
                     clbParties.Items.Add(sti, selectedParties.Contains(Convert.ToInt32(row["party_id"])));
+                    
                 }
             }
         }
@@ -326,7 +327,7 @@ namespace DEXPlugin.Dictionary.Beeline.Sim
                     {
                         msisdnList.Add(dr["msisdn"].ToString());
                     }
-                    msisdnListStr = String.Join(",", msisdnList);
+                    msisdnListStr = String.Join(",", msisdnList.ToArray());
                     whr += ((whr != "") ? "and " : "") + "sim.msisdn in (" + msisdnListStr + ") ";
                 }
                 else
@@ -425,7 +426,8 @@ namespace DEXPlugin.Dictionary.Beeline.Sim
                     {
                         selectedParties.Add((int)soti.Tag);
                     }
-                    parties = String.Join(",", selectedParties);
+                    List<string> strings = selectedParties.Select(i => i.ToString()).ToList();
+                    parties = String.Join(",", strings.ToArray());
 
                     whr += ((whr != "") ? "and " : "") + string.Format("sim.party_id IN ({0}) ", parties);
 
@@ -2376,6 +2378,19 @@ namespace DEXPlugin.Dictionary.Beeline.Sim
             }
             catch (Exception)
             {
+            }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            string[] data = { "3056", "3057", "3058", "3076", "3077", "3078", "3081", "3082", "3084", "3086", "3088", "3091", "3092", "3093", "3094", "3099", "3102", "3126", "3127", "3128", "3129", "3132", "3133", "3136" };
+
+            for (int i = 0; i < clbParties.Items.Count; i++)
+            {
+                if (data.Contains(clbParties.Items[i].ToString()))
+                {
+                    clbParties.SetItemChecked(i, true);
+                }
             }
         }
 

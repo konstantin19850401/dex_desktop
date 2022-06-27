@@ -1013,6 +1013,7 @@ namespace DEXPlugin.Document.MTS.Jeans
             ret["FizDocSeries"] = "Серия удостоверения";
             ret["FizDocType"] = "Тип удостоверения";
             ret["FizDocScan"] = "Скан документа";
+            ret["FizDocCitizen"] = "Гражданство";
             ret["AddrStreet"] = "Улица";
             ret["AddrZip"] = "Индекс";
             ret["AddrState"] = "Область";
@@ -1070,6 +1071,7 @@ namespace DEXPlugin.Document.MTS.Jeans
             sl["FizDocOrg"] = xml.GetNodeByPath("FizDocOrg", true).Text;
             sl["FizDocOrgCode"] = xml.GetNodeByPath("FizDocOrgCode", true).Text;
             sl["FizDocScan"] = xml.GetNodeByPath("FizDocScan", true).Text;
+            sl["FizDocCitizen"] = xml.GetNodeByPath("FizDocCitizen", true).Text;
 
             return sl;
         }

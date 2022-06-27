@@ -765,8 +765,14 @@ namespace DEXPlugin.Function.RebuildAutodocPeople
 
                 //string fdt = '';
                 //if 
-
-                DataTable dtn = d.getQuery("select * from autodoc_people WHERE data LIKE '%FizDocType=2%'");
+                DataTable dtn = null;
+                if (vendor == "mts")
+                {
+                    dtn = d.getQuery("select * from autodoc_people WHERE data LIKE '%FizDocType=10%'");
+                } else
+                {
+                    dtn = d.getQuery("select * from autodoc_people WHERE data LIKE '%FizDocType=2%'");
+                }
                 string currentBase = ((IDEXUserData)toolbox).dataBase;
                 JObject data = new JObject();
                 data["base"] = currentBase;
