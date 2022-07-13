@@ -17,7 +17,7 @@ namespace DEXPlugin.Dictionary.Yota.Sim
         public Object toolbox;
         string[] separators = {((char)9).ToString() , ";", ":", "|", ".", ",", "!", "&" };
 
-        StringTagItem fieldIcc;
+        StringTagItem fieldIcc; StringTagItem fieldMsisdn;
 
         public FSimImport()
         {
@@ -66,8 +66,8 @@ namespace DEXPlugin.Dictionary.Yota.Sim
             cbShowOnlyCorrect.Checked = cfg.getBool(this.Name, "cbShowOnlyCorrect", true);
 
             Dictionary<string, object> dobjs = new Dictionary<string, object>();
-            //fieldMsisdn = new StringTagItem("MSISDN", "msisdn");
-            //dobjs["msisdn"] = fieldMsisdn;
+            fieldMsisdn = new StringTagItem("MSISDN", "msisdn");
+            dobjs["msisdn"] = fieldMsisdn;
             fieldIcc = new StringTagItem("ICC", "icc");
             dobjs["icc"] = fieldIcc;
             //dobjs["region_id"] = new StringTagItem("Регион", "region_id");
@@ -280,9 +280,9 @@ namespace DEXPlugin.Dictionary.Yota.Sim
                     DataTable t = new DataTable();
                     dgvPreview.Columns.Clear();
 
-                    string[] fnames =   { "icc",    "party_id",  "status",    "old" };
-                    string[] fcaption = { "ICC",    "Партия",   "Состояние", "Существует" };
-                    string[] ftypes =   { "String", "Int32",    "String",    "String" };
+                    string[] fnames =   { "icc",    "msisdn" , "party_id",  "status",    "old" };
+                    string[] fcaption = { "ICC",    "MSISDN",  "Партия",   "Состояние", "Существует" };
+                    string[] ftypes =   { "String", "String",  "Int32",    "String",    "String" };
 
                     int fcnt = fnames.Length;
                     for(int f = 0; f < fcnt; ++f)
@@ -439,7 +439,7 @@ namespace DEXPlugin.Dictionary.Yota.Sim
                             if (chkdb)
                             {
                                 DataTable t2 = d.getQuery(string.Format(
-                                    "select icc, party_id from `um_data` where icc='{0}'",
+                                    "select icc, msisdn, party_id from `um_data` where icc='{0}'",
                                     d.EscapeString(d.EscapeString(r["icc"].ToString())
                                     )));
                                 bool emsi = false, eicc = false;
@@ -705,7 +705,7 @@ namespace DEXPlugin.Dictionary.Yota.Sim
 
                             string sql = "insert into `um_data` (status, msisdn, icc, type_sim, fs, date_in, owner_id, date_own, date_sold, region_id, party_id, " +
                                          "plan_id, balance, data) values (0, '" +
-                                         "" + "', '" + dtb.EscapeString(r["icc"].ToString()) + "', '" + typeSim + "', " + ifs.ToString() +
+                                         dtb.EscapeString(r["msisdn"].ToString()) + "', '" + dtb.EscapeString(r["icc"].ToString()) + "', '" + typeSim + "', " + ifs.ToString() +
                                          ", '" + datein + "', -1, '', '', '" + "" +
                                          "', " + r["party_id"].ToString() + ", '" + "" +
                                          "', '" + cbBalance.Text + "', '')";

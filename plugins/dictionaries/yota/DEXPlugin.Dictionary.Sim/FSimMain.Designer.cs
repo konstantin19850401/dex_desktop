@@ -78,17 +78,6 @@
             this.tsbDeleteCard = new System.Windows.Forms.ToolStripButton();
             this.pSim = new System.Windows.Forms.Panel();
             this.dgvSim = new System.Windows.Forms.DataGridView();
-            this.status = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.type_sim = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.icc = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.region_id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.balance = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.owner_id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.date_in = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.date_own = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.date_sold = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.party_id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.comment = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cmsSim = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.tsmiPartyFolder = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiChangePartyId = new System.Windows.Forms.ToolStripMenuItem();
@@ -116,6 +105,18 @@
             this.tsmiSPlan = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiPlan = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiRegion = new System.Windows.Forms.ToolStripMenuItem();
+            this.status = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.msisdn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.type_sim = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.icc = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.region_id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.balance = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.owner_id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.date_in = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.date_own = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.date_sold = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.party_id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.comment = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.msMain.SuspendLayout();
             this.pFilter.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -177,14 +178,14 @@
             // tsmiSimImport
             // 
             this.tsmiSimImport.Name = "tsmiSimImport";
-            this.tsmiSimImport.Size = new System.Drawing.Size(185, 22);
+            this.tsmiSimImport.Size = new System.Drawing.Size(186, 22);
             this.tsmiSimImport.Text = "Загрузка SIM-карт";
             this.tsmiSimImport.Click += new System.EventHandler(this.tsmiSimImport_Click);
             // 
             // tsmiSIMToArchive
             // 
             this.tsmiSIMToArchive.Name = "tsmiSIMToArchive";
-            this.tsmiSIMToArchive.Size = new System.Drawing.Size(185, 22);
+            this.tsmiSIMToArchive.Size = new System.Drawing.Size(186, 22);
             this.tsmiSIMToArchive.Text = "Архивация SIM-карт";
             this.tsmiSIMToArchive.Click += new System.EventHandler(this.tsmiSIMToArchive_Click);
             // 
@@ -457,7 +458,6 @@
             this.tbFilterMSISDN.Name = "tbFilterMSISDN";
             this.tbFilterMSISDN.Size = new System.Drawing.Size(74, 20);
             this.tbFilterMSISDN.TabIndex = 4;
-            this.tbFilterMSISDN.Visible = false;
             this.tbFilterMSISDN.TextChanged += new System.EventHandler(this.tbFilterMSISDN_TextChanged);
             // 
             // label2
@@ -488,7 +488,6 @@
             this.label1.Size = new System.Drawing.Size(49, 13);
             this.label1.TabIndex = 1;
             this.label1.Text = "MSISDN";
-            this.label1.Visible = false;
             // 
             // bSetFilter
             // 
@@ -616,6 +615,7 @@
             this.dgvSim.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvSim.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.status,
+            this.msisdn,
             this.type_sim,
             this.icc,
             this.region_id,
@@ -641,72 +641,6 @@
             this.dgvSim.SelectionChanged += new System.EventHandler(this.dgvSim_SelectionChanged);
             this.dgvSim.KeyDown += new System.Windows.Forms.KeyEventHandler(this.dgvSim_KeyDown);
             this.dgvSim.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.dgvSim_MouseDoubleClick);
-            // 
-            // status
-            // 
-            this.status.HeaderText = "Статус";
-            this.status.Name = "status";
-            this.status.ReadOnly = true;
-            // 
-            // type_sim
-            // 
-            this.type_sim.HeaderText = "Тип сим-карты";
-            this.type_sim.Name = "type_sim";
-            this.type_sim.ReadOnly = true;
-            // 
-            // icc
-            // 
-            this.icc.HeaderText = "ICC";
-            this.icc.Name = "icc";
-            this.icc.ReadOnly = true;
-            // 
-            // region_id
-            // 
-            this.region_id.HeaderText = "Регион";
-            this.region_id.Name = "region_id";
-            this.region_id.ReadOnly = true;
-            // 
-            // balance
-            // 
-            this.balance.HeaderText = "Баланс";
-            this.balance.Name = "balance";
-            this.balance.ReadOnly = true;
-            // 
-            // owner_id
-            // 
-            this.owner_id.HeaderText = "Отделение";
-            this.owner_id.Name = "owner_id";
-            this.owner_id.ReadOnly = true;
-            // 
-            // date_in
-            // 
-            this.date_in.HeaderText = "Поступление";
-            this.date_in.Name = "date_in";
-            this.date_in.ReadOnly = true;
-            // 
-            // date_own
-            // 
-            this.date_own.HeaderText = "Выдача";
-            this.date_own.Name = "date_own";
-            this.date_own.ReadOnly = true;
-            // 
-            // date_sold
-            // 
-            this.date_sold.HeaderText = "Продажа";
-            this.date_sold.Name = "date_sold";
-            this.date_sold.ReadOnly = true;
-            // 
-            // party_id
-            // 
-            this.party_id.HeaderText = "Код партии";
-            this.party_id.Name = "party_id";
-            this.party_id.ReadOnly = true;
-            // 
-            // comment
-            // 
-            this.comment.HeaderText = "Примечание";
-            this.comment.Name = "comment";
-            this.comment.ReadOnly = true;
             // 
             // cmsSim
             // 
@@ -901,6 +835,78 @@
             this.tsmiRegion.Text = "Регион 1";
             this.tsmiRegion.Click += new System.EventHandler(this.tsmiRegion_Click);
             // 
+            // status
+            // 
+            this.status.HeaderText = "Статус";
+            this.status.Name = "status";
+            this.status.ReadOnly = true;
+            // 
+            // msisdn
+            // 
+            this.msisdn.HeaderText = "MSISDN";
+            this.msisdn.Name = "msisdn";
+            this.msisdn.ReadOnly = true;
+            // 
+            // type_sim
+            // 
+            this.type_sim.HeaderText = "Тип сим-карты";
+            this.type_sim.Name = "type_sim";
+            this.type_sim.ReadOnly = true;
+            // 
+            // icc
+            // 
+            this.icc.HeaderText = "ICC";
+            this.icc.Name = "icc";
+            this.icc.ReadOnly = true;
+            // 
+            // region_id
+            // 
+            this.region_id.HeaderText = "Регион";
+            this.region_id.Name = "region_id";
+            this.region_id.ReadOnly = true;
+            // 
+            // balance
+            // 
+            this.balance.HeaderText = "Баланс";
+            this.balance.Name = "balance";
+            this.balance.ReadOnly = true;
+            // 
+            // owner_id
+            // 
+            this.owner_id.HeaderText = "Отделение";
+            this.owner_id.Name = "owner_id";
+            this.owner_id.ReadOnly = true;
+            // 
+            // date_in
+            // 
+            this.date_in.HeaderText = "Поступление";
+            this.date_in.Name = "date_in";
+            this.date_in.ReadOnly = true;
+            // 
+            // date_own
+            // 
+            this.date_own.HeaderText = "Выдача";
+            this.date_own.Name = "date_own";
+            this.date_own.ReadOnly = true;
+            // 
+            // date_sold
+            // 
+            this.date_sold.HeaderText = "Продажа";
+            this.date_sold.Name = "date_sold";
+            this.date_sold.ReadOnly = true;
+            // 
+            // party_id
+            // 
+            this.party_id.HeaderText = "Код партии";
+            this.party_id.Name = "party_id";
+            this.party_id.ReadOnly = true;
+            // 
+            // comment
+            // 
+            this.comment.HeaderText = "Примечание";
+            this.comment.Name = "comment";
+            this.comment.ReadOnly = true;
+            // 
             // FSimMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1013,7 +1019,12 @@
         private System.Windows.Forms.NumericUpDown nudIccAddZero;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem tsmiChangeTypeSim;
+        private System.Windows.Forms.ToolStripMenuItem tsmiChangePartyTypeSim;
+        private System.Windows.Forms.ToolStripMenuItem вернутьНаСкладToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem присвоитьОтделениеToolStripMenuItem;
         private System.Windows.Forms.DataGridViewTextBoxColumn status;
+        private System.Windows.Forms.DataGridViewTextBoxColumn msisdn;
         private System.Windows.Forms.DataGridViewTextBoxColumn type_sim;
         private System.Windows.Forms.DataGridViewTextBoxColumn icc;
         private System.Windows.Forms.DataGridViewTextBoxColumn region_id;
@@ -1024,9 +1035,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn date_sold;
         private System.Windows.Forms.DataGridViewTextBoxColumn party_id;
         private System.Windows.Forms.DataGridViewTextBoxColumn comment;
-        private System.Windows.Forms.ToolStripMenuItem tsmiChangeTypeSim;
-        private System.Windows.Forms.ToolStripMenuItem tsmiChangePartyTypeSim;
-        private System.Windows.Forms.ToolStripMenuItem вернутьНаСкладToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem присвоитьОтделениеToolStripMenuItem;
     }
 }

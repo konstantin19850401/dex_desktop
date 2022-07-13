@@ -35,7 +35,7 @@ namespace DEXPlugin.Dictionary.Yota.Sim
             bsSim = new BindingSource();
             dgvSim.DataSource = bsSim;
             dgvSim.AutoGenerateColumns = false;
-            //this.msisdn.DataPropertyName = "msisdn";
+            this.msisdn.DataPropertyName = "msisdn";
             
             //this.fs.DataPropertyName = "fs";
             this.status.DataPropertyName = "status";
@@ -510,7 +510,7 @@ namespace DEXPlugin.Dictionary.Yota.Sim
             // Продана = 2
 
             string ret = cmd.Replace("@status", sstatus.ToString());
-            //ret = ret.Replace("@msisdn", "'" + d.EscapeString(simEd.tbMSISDN.Text) + "'");
+            ret = ret.Replace("@msisdn", "'" + d.EscapeString(simEd.tbMSISDN.Text) + "'");
             ret = ret.Replace("@icc", "'" + d.EscapeString(simEd.tbICC.Text) + "'");
             ret = ret.Replace("@date_in", "'" + d.EscapeString(simEd.dtpDate_in.Value.ToString("yyyyMMdd")) + "'");
             //ret = ret.Replace("@fs", simEd.cbFS.Checked ? "1" : "0");

@@ -283,7 +283,12 @@ namespace DEXPlugin.Document.MTS.Jeans
 
                     if (xml.GetNodeByPath("FizDocCitizen", false) != null && xml.GetNodeByPath("FizDocCitizen", true).Text != "")
                     {
-                        StringTagItem.SelectByTag(cbFizDocСitizen, xml.GetNodeByPath("FizDocCitizen", true).Attributes["tag"], true);
+                        try
+                        {
+                            StringTagItem.SelectByTag(cbFizDocСitizen, xml.GetNodeByPath("FizDocCitizen", true).Attributes["tag"], true);
+                        }
+                        catch (Exception e) { }
+                        
                     }
 
                     
