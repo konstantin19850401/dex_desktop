@@ -60,11 +60,8 @@
             this.tbAddrApartment = new System.Windows.Forms.TextBox();
             this.label24 = new System.Windows.Forms.Label();
             this.label25 = new System.Windows.Forms.Label();
-            this.deBirth = new DEXExtendLib.DateEdit();
-            this.deFizDocDate = new DEXExtendLib.DateEdit();
             this.button1 = new System.Windows.Forms.Button();
             this.label27 = new System.Windows.Forms.Label();
-            this.deJournalDate = new DEXExtendLib.DateEdit();
             this.tbAddrCity = new System.Windows.Forms.TextBox();
             this.tbAddrRegion = new System.Windows.Forms.TextBox();
             this.tbLastName = new System.Windows.Forms.TextBox();
@@ -76,7 +73,6 @@
             this.cbFizDocType = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.cbAddrCountry = new System.Windows.Forms.ComboBox();
-            this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.tbFizBirthPlace = new System.Windows.Forms.TextBox();
             this.label28 = new System.Windows.Forms.Label();
@@ -92,7 +88,6 @@
             this.tbFizDocSeries = new System.Windows.Forms.MaskedTextBox();
             this.cbDocReg = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.deDocDate = new DEXExtendLib.DateEdit();
             this.label6 = new System.Windows.Forms.Label();
             this.lOwner = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
@@ -100,8 +95,10 @@
             this.tbFizDocOrgCode = new System.Windows.Forms.MaskedTextBox();
             this.label53 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.cb_refugee = new System.Windows.Forms.CheckBox();
             this.gbDocInfo = new System.Windows.Forms.GroupBox();
             this.gbDocParams = new System.Windows.Forms.GroupBox();
+            this.deFizDocDate = new DEXExtendLib.DateEdit();
             this.cbOtherDocTypes = new System.Windows.Forms.ComboBox();
             this.addOrg = new System.Windows.Forms.Button();
             this.label38 = new System.Windows.Forms.Label();
@@ -134,7 +131,9 @@
             this.bShowScan = new System.Windows.Forms.Button();
             this.label32 = new System.Windows.Forms.Label();
             this.cbFizDocСitizen = new System.Windows.Forms.ComboBox();
-            this.cb_refugee = new System.Windows.Forms.CheckBox();
+            this.deDocDate = new DEXExtendLib.DateEdit();
+            this.deJournalDate = new DEXExtendLib.DateEdit();
+            this.deBirth = new DEXExtendLib.DateEdit();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             this.gbDocInfo.SuspendLayout();
@@ -152,9 +151,9 @@
             this.panel2.Controls.Add(this.cbDocStatus);
             this.panel2.Controls.Add(this.label26);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel2.Location = new System.Drawing.Point(0, 729);
+            this.panel2.Location = new System.Drawing.Point(0, 597);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(664, 41);
+            this.panel2.Size = new System.Drawing.Size(887, 41);
             this.panel2.TabIndex = 4;
             // 
             // bSaveDefaults
@@ -262,7 +261,7 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(15, 173);
+            this.label9.Location = new System.Drawing.Point(15, 145);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(56, 13);
             this.label9.TabIndex = 19;
@@ -271,7 +270,7 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(179, 173);
+            this.label10.Location = new System.Drawing.Point(179, 145);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(29, 13);
             this.label10.TabIndex = 21;
@@ -280,7 +279,7 @@
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(374, 173);
+            this.label11.Location = new System.Drawing.Point(360, 146);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(54, 13);
             this.label11.TabIndex = 23;
@@ -289,7 +288,7 @@
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(529, 212);
+            this.label12.Location = new System.Drawing.Point(529, 184);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(86, 13);
             this.label12.TabIndex = 25;
@@ -298,7 +297,7 @@
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(15, 262);
+            this.label13.Location = new System.Drawing.Point(15, 234);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(135, 13);
             this.label13.TabIndex = 27;
@@ -334,7 +333,7 @@
             // label16
             // 
             this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(27, 119);
+            this.label16.Location = new System.Drawing.Point(24, 113);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(69, 13);
             this.label16.TabIndex = 33;
@@ -352,7 +351,7 @@
             // label18
             // 
             this.label18.AutoSize = true;
-            this.label18.Location = new System.Drawing.Point(393, 594);
+            this.label18.Location = new System.Drawing.Point(393, 466);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(37, 13);
             this.label18.TabIndex = 41;
@@ -360,7 +359,7 @@
             // 
             // tbAddrZip
             // 
-            this.tbAddrZip.Location = new System.Drawing.Point(585, 611);
+            this.tbAddrZip.Location = new System.Drawing.Point(582, 484);
             this.tbAddrZip.MaxLength = 6;
             this.tbAddrZip.Name = "tbAddrZip";
             this.tbAddrZip.Size = new System.Drawing.Size(67, 20);
@@ -370,7 +369,7 @@
             // label19
             // 
             this.label19.AutoSize = true;
-            this.label19.Location = new System.Drawing.Point(584, 594);
+            this.label19.Location = new System.Drawing.Point(584, 466);
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(45, 13);
             this.label19.TabIndex = 43;
@@ -379,7 +378,7 @@
             // label20
             // 
             this.label20.AutoSize = true;
-            this.label20.Location = new System.Drawing.Point(196, 638);
+            this.label20.Location = new System.Drawing.Point(196, 510);
             this.label20.Name = "label20";
             this.label20.Size = new System.Drawing.Size(39, 13);
             this.label20.TabIndex = 45;
@@ -388,7 +387,7 @@
             // label21
             // 
             this.label21.AutoSize = true;
-            this.label21.Location = new System.Drawing.Point(196, 594);
+            this.label21.Location = new System.Drawing.Point(196, 466);
             this.label21.Name = "label21";
             this.label21.Size = new System.Drawing.Size(50, 13);
             this.label21.TabIndex = 37;
@@ -397,7 +396,7 @@
             // label22
             // 
             this.label22.AutoSize = true;
-            this.label22.Location = new System.Drawing.Point(15, 638);
+            this.label22.Location = new System.Drawing.Point(15, 510);
             this.label22.Name = "label22";
             this.label22.Size = new System.Drawing.Size(38, 13);
             this.label22.TabIndex = 39;
@@ -406,7 +405,7 @@
             // label23
             // 
             this.label23.AutoSize = true;
-            this.label23.Location = new System.Drawing.Point(430, 638);
+            this.label23.Location = new System.Drawing.Point(427, 510);
             this.label23.Name = "label23";
             this.label23.Size = new System.Drawing.Size(30, 13);
             this.label23.TabIndex = 47;
@@ -414,7 +413,7 @@
             // 
             // tbAddrHouse
             // 
-            this.tbAddrHouse.Location = new System.Drawing.Point(433, 655);
+            this.tbAddrHouse.Location = new System.Drawing.Point(430, 527);
             this.tbAddrHouse.Name = "tbAddrHouse";
             this.tbAddrHouse.Size = new System.Drawing.Size(70, 20);
             this.tbAddrHouse.TabIndex = 31;
@@ -422,7 +421,7 @@
             // 
             // tbAddrBuilding
             // 
-            this.tbAddrBuilding.Location = new System.Drawing.Point(509, 655);
+            this.tbAddrBuilding.Location = new System.Drawing.Point(506, 527);
             this.tbAddrBuilding.Name = "tbAddrBuilding";
             this.tbAddrBuilding.Size = new System.Drawing.Size(70, 20);
             this.tbAddrBuilding.TabIndex = 32;
@@ -430,7 +429,7 @@
             // 
             // tbAddrApartment
             // 
-            this.tbAddrApartment.Location = new System.Drawing.Point(585, 655);
+            this.tbAddrApartment.Location = new System.Drawing.Point(582, 527);
             this.tbAddrApartment.Name = "tbAddrApartment";
             this.tbAddrApartment.Size = new System.Drawing.Size(67, 20);
             this.tbAddrApartment.TabIndex = 33;
@@ -439,7 +438,7 @@
             // label24
             // 
             this.label24.AutoSize = true;
-            this.label24.Location = new System.Drawing.Point(506, 638);
+            this.label24.Location = new System.Drawing.Point(503, 510);
             this.label24.Name = "label24";
             this.label24.Size = new System.Drawing.Size(43, 13);
             this.label24.TabIndex = 49;
@@ -448,37 +447,15 @@
             // label25
             // 
             this.label25.AutoSize = true;
-            this.label25.Location = new System.Drawing.Point(582, 638);
+            this.label25.Location = new System.Drawing.Point(579, 510);
             this.label25.Name = "label25";
             this.label25.Size = new System.Drawing.Size(55, 13);
             this.label25.TabIndex = 51;
             this.label25.Text = "Квартира";
             // 
-            // deBirth
-            // 
-            this.deBirth.FormattingEnabled = true;
-            this.deBirth.InputChar = '*';
-            this.deBirth.Location = new System.Drawing.Point(532, 228);
-            this.deBirth.MaxLength = 10;
-            this.deBirth.Name = "deBirth";
-            this.deBirth.Size = new System.Drawing.Size(95, 21);
-            this.deBirth.TabIndex = 17;
-            this.deBirth.KeyDown += new System.Windows.Forms.KeyEventHandler(this.cbDocUnit_KeyDown);
-            // 
-            // deFizDocDate
-            // 
-            this.deFizDocDate.FormattingEnabled = true;
-            this.deFizDocDate.InputChar = '*';
-            this.deFizDocDate.Location = new System.Drawing.Point(218, 31);
-            this.deFizDocDate.MaxLength = 10;
-            this.deFizDocDate.Name = "deFizDocDate";
-            this.deFizDocDate.Size = new System.Drawing.Size(95, 21);
-            this.deFizDocDate.TabIndex = 22;
-            this.deFizDocDate.KeyDown += new System.Windows.Forms.KeyEventHandler(this.cbDocUnit_KeyDown);
-            // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(635, 186);
+            this.button1.Location = new System.Drawing.Point(629, 161);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(20, 23);
             this.button1.TabIndex = 18;
@@ -496,22 +473,11 @@
             this.label27.TabIndex = 53;
             this.label27.Text = "Дата документа";
             // 
-            // deJournalDate
-            // 
-            this.deJournalDate.FormattingEnabled = true;
-            this.deJournalDate.InputChar = '*';
-            this.deJournalDate.Location = new System.Drawing.Point(108, 6);
-            this.deJournalDate.MaxLength = 10;
-            this.deJournalDate.Name = "deJournalDate";
-            this.deJournalDate.Size = new System.Drawing.Size(90, 21);
-            this.deJournalDate.TabIndex = 1;
-            this.deJournalDate.KeyDown += new System.Windows.Forms.KeyEventHandler(this.cbDocUnit_KeyDown);
-            // 
             // tbAddrCity
             // 
             this.tbAddrCity.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
             this.tbAddrCity.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
-            this.tbAddrCity.Location = new System.Drawing.Point(396, 612);
+            this.tbAddrCity.Location = new System.Drawing.Point(396, 484);
             this.tbAddrCity.Name = "tbAddrCity";
             this.tbAddrCity.Size = new System.Drawing.Size(180, 20);
             this.tbAddrCity.TabIndex = 27;
@@ -522,7 +488,7 @@
             // 
             this.tbAddrRegion.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
             this.tbAddrRegion.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
-            this.tbAddrRegion.Location = new System.Drawing.Point(18, 654);
+            this.tbAddrRegion.Location = new System.Drawing.Point(18, 526);
             this.tbAddrRegion.Name = "tbAddrRegion";
             this.tbAddrRegion.Size = new System.Drawing.Size(174, 20);
             this.tbAddrRegion.TabIndex = 29;
@@ -531,7 +497,7 @@
             // 
             // tbLastName
             // 
-            this.tbLastName.Location = new System.Drawing.Point(18, 189);
+            this.tbLastName.Location = new System.Drawing.Point(18, 161);
             this.tbLastName.Name = "tbLastName";
             this.tbLastName.Size = new System.Drawing.Size(156, 20);
             this.tbLastName.TabIndex = 12;
@@ -539,15 +505,15 @@
             // 
             // tbFirstName
             // 
-            this.tbFirstName.Location = new System.Drawing.Point(182, 189);
+            this.tbFirstName.Location = new System.Drawing.Point(182, 161);
             this.tbFirstName.Name = "tbFirstName";
-            this.tbFirstName.Size = new System.Drawing.Size(189, 20);
+            this.tbFirstName.Size = new System.Drawing.Size(179, 20);
             this.tbFirstName.TabIndex = 13;
             this.tbFirstName.KeyDown += new System.Windows.Forms.KeyEventHandler(this.tbLastName_KeyDown);
             // 
             // tbSecondName
             // 
-            this.tbSecondName.Location = new System.Drawing.Point(377, 189);
+            this.tbSecondName.Location = new System.Drawing.Point(363, 162);
             this.tbSecondName.Name = "tbSecondName";
             this.tbSecondName.Size = new System.Drawing.Size(149, 20);
             this.tbSecondName.TabIndex = 14;
@@ -557,7 +523,7 @@
             // 
             this.tbFizDocOrg.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
             this.tbFizDocOrg.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
-            this.tbFizDocOrg.Location = new System.Drawing.Point(30, 134);
+            this.tbFizDocOrg.Location = new System.Drawing.Point(27, 128);
             this.tbFizDocOrg.Name = "tbFizDocOrg";
             this.tbFizDocOrg.Size = new System.Drawing.Size(309, 20);
             this.tbFizDocOrg.TabIndex = 24;
@@ -568,9 +534,9 @@
             // 
             this.tbAddrStreet.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
             this.tbAddrStreet.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
-            this.tbAddrStreet.Location = new System.Drawing.Point(199, 655);
+            this.tbAddrStreet.Location = new System.Drawing.Point(199, 527);
             this.tbAddrStreet.Name = "tbAddrStreet";
-            this.tbAddrStreet.Size = new System.Drawing.Size(228, 20);
+            this.tbAddrStreet.Size = new System.Drawing.Size(224, 20);
             this.tbAddrStreet.TabIndex = 30;
             this.tbAddrStreet.Enter += new System.EventHandler(this.cbDocUnit_Enter);
             this.tbAddrStreet.KeyDown += new System.Windows.Forms.KeyEventHandler(this.tbLastName_KeyDown);
@@ -579,7 +545,7 @@
             // 
             this.tbAddrState.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
             this.tbAddrState.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
-            this.tbAddrState.Location = new System.Drawing.Point(199, 612);
+            this.tbAddrState.Location = new System.Drawing.Point(199, 484);
             this.tbAddrState.Name = "tbAddrState";
             this.tbAddrState.Size = new System.Drawing.Size(191, 20);
             this.tbAddrState.TabIndex = 26;
@@ -591,7 +557,7 @@
             this.cbFizDocType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbFizDocType.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.cbFizDocType.FormattingEnabled = true;
-            this.cbFizDocType.Location = new System.Drawing.Point(18, 279);
+            this.cbFizDocType.Location = new System.Drawing.Point(18, 251);
             this.cbFizDocType.Name = "cbFizDocType";
             this.cbFizDocType.Size = new System.Drawing.Size(203, 21);
             this.cbFizDocType.TabIndex = 19;
@@ -602,7 +568,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(15, 594);
+            this.label1.Location = new System.Drawing.Point(15, 466);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(43, 13);
             this.label1.TabIndex = 55;
@@ -614,27 +580,17 @@
             this.cbAddrCountry.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.cbAddrCountry.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.cbAddrCountry.FormattingEnabled = true;
-            this.cbAddrCountry.Location = new System.Drawing.Point(18, 610);
+            this.cbAddrCountry.Location = new System.Drawing.Point(18, 482);
             this.cbAddrCountry.Name = "cbAddrCountry";
             this.cbAddrCountry.Size = new System.Drawing.Size(174, 21);
             this.cbAddrCountry.TabIndex = 25;
             this.cbAddrCountry.Enter += new System.EventHandler(this.cbDocUnit_Enter);
             this.cbAddrCountry.KeyDown += new System.Windows.Forms.KeyEventHandler(this.cbDocUnit_KeyDown);
             // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label3.Location = new System.Drawing.Point(15, 577);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(83, 13);
-            this.label3.TabIndex = 57;
-            this.label3.Text = "Регистрация";
-            // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(15, 212);
+            this.label4.Location = new System.Drawing.Point(15, 184);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(92, 13);
             this.label4.TabIndex = 58;
@@ -642,7 +598,7 @@
             // 
             // tbFizBirthPlace
             // 
-            this.tbFizBirthPlace.Location = new System.Drawing.Point(18, 228);
+            this.tbFizBirthPlace.Location = new System.Drawing.Point(18, 200);
             this.tbFizBirthPlace.Name = "tbFizBirthPlace";
             this.tbFizBirthPlace.Size = new System.Drawing.Size(508, 20);
             this.tbFizBirthPlace.TabIndex = 16;
@@ -653,7 +609,7 @@
             // label28
             // 
             this.label28.AutoSize = true;
-            this.label28.Location = new System.Drawing.Point(529, 173);
+            this.label28.Location = new System.Drawing.Point(515, 146);
             this.label28.Name = "label28";
             this.label28.Size = new System.Drawing.Size(27, 13);
             this.label28.TabIndex = 60;
@@ -664,7 +620,7 @@
             this.cbSex.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbSex.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.cbSex.FormattingEnabled = true;
-            this.cbSex.Location = new System.Drawing.Point(532, 188);
+            this.cbSex.Location = new System.Drawing.Point(518, 161);
             this.cbSex.Name = "cbSex";
             this.cbSex.Size = new System.Drawing.Size(97, 21);
             this.cbSex.TabIndex = 15;
@@ -694,7 +650,7 @@
             // label31
             // 
             this.label31.AutoSize = true;
-            this.label31.Location = new System.Drawing.Point(15, 686);
+            this.label31.Location = new System.Drawing.Point(15, 549);
             this.label31.Name = "label31";
             this.label31.Size = new System.Drawing.Size(52, 13);
             this.label31.TabIndex = 66;
@@ -702,9 +658,9 @@
             // 
             // tbAddrPhone
             // 
-            this.tbAddrPhone.Location = new System.Drawing.Point(18, 702);
+            this.tbAddrPhone.Location = new System.Drawing.Point(18, 566);
             this.tbAddrPhone.Name = "tbAddrPhone";
-            this.tbAddrPhone.Size = new System.Drawing.Size(174, 20);
+            this.tbAddrPhone.Size = new System.Drawing.Size(112, 20);
             this.tbAddrPhone.TabIndex = 34;
             this.tbAddrPhone.Enter += new System.EventHandler(this.cbDocUnit_Enter);
             this.tbAddrPhone.KeyDown += new System.Windows.Forms.KeyEventHandler(this.cbDocUnit_KeyDown);
@@ -777,18 +733,6 @@
             this.label2.Size = new System.Drawing.Size(113, 13);
             this.label2.TabIndex = 106;
             this.label2.Text = "Регион подключения";
-            // 
-            // deDocDate
-            // 
-            this.deDocDate.FormattingEnabled = true;
-            this.deDocDate.InputChar = '*';
-            this.deDocDate.Location = new System.Drawing.Point(108, 46);
-            this.deDocDate.MaxLength = 10;
-            this.deDocDate.Name = "deDocDate";
-            this.deDocDate.Size = new System.Drawing.Size(90, 21);
-            this.deDocDate.TabIndex = 3;
-            this.deDocDate.Enter += new System.EventHandler(this.cbDocUnit_Enter);
-            this.deDocDate.KeyDown += new System.Windows.Forms.KeyEventHandler(this.cbDocUnit_KeyDown);
             // 
             // label6
             // 
@@ -877,7 +821,6 @@
             this.panel1.Controls.Add(this.label28);
             this.panel1.Controls.Add(this.tbFizBirthPlace);
             this.panel1.Controls.Add(this.label4);
-            this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.cbAddrCountry);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.cbFizDocType);
@@ -916,8 +859,18 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(664, 729);
+            this.panel1.Size = new System.Drawing.Size(887, 597);
             this.panel1.TabIndex = 5;
+            // 
+            // cb_refugee
+            // 
+            this.cb_refugee.AutoSize = true;
+            this.cb_refugee.Location = new System.Drawing.Point(18, 363);
+            this.cb_refugee.Name = "cb_refugee";
+            this.cb_refugee.Size = new System.Drawing.Size(71, 17);
+            this.cb_refugee.TabIndex = 151;
+            this.cb_refugee.Text = "Беженец";
+            this.cb_refugee.UseVisualStyleBackColor = true;
             // 
             // gbDocInfo
             // 
@@ -926,9 +879,9 @@
             this.gbDocInfo.Controls.Add(this.addOrg);
             this.gbDocInfo.Controls.Add(this.tbFizDocOrg);
             this.gbDocInfo.Controls.Add(this.label16);
-            this.gbDocInfo.Location = new System.Drawing.Point(226, 254);
+            this.gbDocInfo.Location = new System.Drawing.Point(229, 226);
             this.gbDocInfo.Name = "gbDocInfo";
-            this.gbDocInfo.Size = new System.Drawing.Size(423, 162);
+            this.gbDocInfo.Size = new System.Drawing.Size(420, 162);
             this.gbDocInfo.TabIndex = 150;
             this.gbDocInfo.TabStop = false;
             this.gbDocInfo.Text = "Информация о документе";
@@ -943,12 +896,23 @@
             this.gbDocParams.Controls.Add(this.label15);
             this.gbDocParams.Controls.Add(this.deFizDocDate);
             this.gbDocParams.Controls.Add(this.label17);
-            this.gbDocParams.Location = new System.Drawing.Point(9, 52);
+            this.gbDocParams.Location = new System.Drawing.Point(6, 46);
             this.gbDocParams.Name = "gbDocParams";
             this.gbDocParams.Size = new System.Drawing.Size(402, 64);
             this.gbDocParams.TabIndex = 150;
             this.gbDocParams.TabStop = false;
             this.gbDocParams.Text = "Параметры документа";
+            // 
+            // deFizDocDate
+            // 
+            this.deFizDocDate.FormattingEnabled = true;
+            this.deFizDocDate.InputChar = '*';
+            this.deFizDocDate.Location = new System.Drawing.Point(218, 31);
+            this.deFizDocDate.MaxLength = 10;
+            this.deFizDocDate.Name = "deFizDocDate";
+            this.deFizDocDate.Size = new System.Drawing.Size(95, 21);
+            this.deFizDocDate.TabIndex = 22;
+            this.deFizDocDate.KeyDown += new System.Windows.Forms.KeyEventHandler(this.cbDocUnit_KeyDown);
             // 
             // cbOtherDocTypes
             // 
@@ -956,16 +920,16 @@
             this.cbOtherDocTypes.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.cbOtherDocTypes.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.cbOtherDocTypes.FormattingEnabled = true;
-            this.cbOtherDocTypes.Location = new System.Drawing.Point(9, 25);
+            this.cbOtherDocTypes.Location = new System.Drawing.Point(6, 19);
             this.cbOtherDocTypes.Name = "cbOtherDocTypes";
-            this.cbOtherDocTypes.Size = new System.Drawing.Size(252, 21);
+            this.cbOtherDocTypes.Size = new System.Drawing.Size(402, 21);
             this.cbOtherDocTypes.TabIndex = 149;
             this.cbOtherDocTypes.Visible = false;
             this.cbOtherDocTypes.KeyDown += new System.Windows.Forms.KeyEventHandler(this.cbOtherDocTypes_KeyDown);
             // 
             // addOrg
             // 
-            this.addOrg.Location = new System.Drawing.Point(345, 131);
+            this.addOrg.Location = new System.Drawing.Point(342, 125);
             this.addOrg.Name = "addOrg";
             this.addOrg.Size = new System.Drawing.Size(66, 23);
             this.addOrg.TabIndex = 136;
@@ -976,7 +940,7 @@
             // label38
             // 
             this.label38.AutoSize = true;
-            this.label38.Location = new System.Drawing.Point(15, 349);
+            this.label38.Location = new System.Drawing.Point(15, 321);
             this.label38.Name = "label38";
             this.label38.Size = new System.Drawing.Size(44, 13);
             this.label38.TabIndex = 147;
@@ -996,7 +960,7 @@
             this.gbResidenceValidity.Controls.Add(this.label37);
             this.gbResidenceValidity.Controls.Add(this.deDocResidenceEnd);
             this.gbResidenceValidity.Controls.Add(this.cbDocTypeResidence);
-            this.gbResidenceValidity.Location = new System.Drawing.Point(18, 420);
+            this.gbResidenceValidity.Location = new System.Drawing.Point(18, 392);
             this.gbResidenceValidity.Name = "gbResidenceValidity";
             this.gbResidenceValidity.Size = new System.Drawing.Size(631, 71);
             this.gbResidenceValidity.TabIndex = 150;
@@ -1090,7 +1054,7 @@
             // 
             this.label37.AutoSize = true;
             this.label37.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label37.Location = new System.Drawing.Point(517, 46);
+            this.label37.Location = new System.Drawing.Point(515, 46);
             this.label37.Name = "label37";
             this.label37.Size = new System.Drawing.Size(19, 13);
             this.label37.TabIndex = 151;
@@ -1123,7 +1087,7 @@
             // 
             // tbFizDocCitizenOther
             // 
-            this.tbFizDocCitizenOther.Location = new System.Drawing.Point(18, 365);
+            this.tbFizDocCitizenOther.Location = new System.Drawing.Point(18, 337);
             this.tbFizDocCitizenOther.Name = "tbFizDocCitizenOther";
             this.tbFizDocCitizenOther.Size = new System.Drawing.Size(202, 20);
             this.tbFizDocCitizenOther.TabIndex = 146;
@@ -1142,7 +1106,7 @@
             // 
             this.cbProf.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbProf.FormattingEnabled = true;
-            this.cbProf.Location = new System.Drawing.Point(474, 129);
+            this.cbProf.Location = new System.Drawing.Point(474, 117);
             this.cbProf.Name = "cbProf";
             this.cbProf.Size = new System.Drawing.Size(175, 21);
             this.cbProf.TabIndex = 11;
@@ -1152,7 +1116,7 @@
             // label29
             // 
             this.label29.AutoSize = true;
-            this.label29.Location = new System.Drawing.Point(365, 131);
+            this.label29.Location = new System.Drawing.Point(365, 121);
             this.label29.Name = "label29";
             this.label29.Size = new System.Drawing.Size(103, 13);
             this.label29.TabIndex = 138;
@@ -1169,9 +1133,9 @@
             this.gbScan.Controls.Add(this.lbScanPath);
             this.gbScan.Controls.Add(this.cbScan);
             this.gbScan.Controls.Add(this.bShowScan);
-            this.gbScan.Location = new System.Drawing.Point(18, 505);
+            this.gbScan.Location = new System.Drawing.Point(675, 6);
             this.gbScan.Name = "gbScan";
-            this.gbScan.Size = new System.Drawing.Size(634, 71);
+            this.gbScan.Size = new System.Drawing.Size(189, 165);
             this.gbScan.TabIndex = 137;
             this.gbScan.TabStop = false;
             this.gbScan.Text = "Информация о документе";
@@ -1179,7 +1143,7 @@
             // lbIfScanChange
             // 
             this.lbIfScanChange.AutoSize = true;
-            this.lbIfScanChange.Location = new System.Drawing.Point(14, 45);
+            this.lbIfScanChange.Location = new System.Drawing.Point(19, 357);
             this.lbIfScanChange.Name = "lbIfScanChange";
             this.lbIfScanChange.Size = new System.Drawing.Size(13, 13);
             this.lbIfScanChange.TabIndex = 136;
@@ -1188,7 +1152,7 @@
             // 
             // bSaveImage
             // 
-            this.bSaveImage.Location = new System.Drawing.Point(472, 24);
+            this.bSaveImage.Location = new System.Drawing.Point(10, 129);
             this.bSaveImage.Name = "bSaveImage";
             this.bSaveImage.Size = new System.Drawing.Size(75, 23);
             this.bSaveImage.TabIndex = 133;
@@ -1199,7 +1163,7 @@
             // lbScanMime
             // 
             this.lbScanMime.AutoSize = true;
-            this.lbScanMime.Location = new System.Drawing.Point(367, 40);
+            this.lbScanMime.Location = new System.Drawing.Point(13, 95);
             this.lbScanMime.Name = "lbScanMime";
             this.lbScanMime.Size = new System.Drawing.Size(19, 13);
             this.lbScanMime.TabIndex = 132;
@@ -1218,7 +1182,7 @@
             // signatire
             // 
             this.signatire.AutoSize = true;
-            this.signatire.Location = new System.Drawing.Point(367, 24);
+            this.signatire.Location = new System.Drawing.Point(13, 79);
             this.signatire.Name = "signatire";
             this.signatire.Size = new System.Drawing.Size(19, 13);
             this.signatire.TabIndex = 131;
@@ -1227,7 +1191,7 @@
             // label83
             // 
             this.label83.AutoSize = true;
-            this.label83.Location = new System.Drawing.Point(192, 24);
+            this.label83.Location = new System.Drawing.Point(12, 48);
             this.label83.Name = "label83";
             this.label83.Size = new System.Drawing.Size(41, 13);
             this.label83.TabIndex = 127;
@@ -1236,7 +1200,7 @@
             // lbScanPath
             // 
             this.lbScanPath.AutoSize = true;
-            this.lbScanPath.Location = new System.Drawing.Point(367, 9);
+            this.lbScanPath.Location = new System.Drawing.Point(13, 64);
             this.lbScanPath.MaximumSize = new System.Drawing.Size(62, 13);
             this.lbScanPath.Name = "lbScanPath";
             this.lbScanPath.Size = new System.Drawing.Size(19, 13);
@@ -1250,14 +1214,14 @@
             this.cbScan.Items.AddRange(new object[] {
             "Отсутствует",
             "Присутствует"});
-            this.cbScan.Location = new System.Drawing.Point(233, 21);
+            this.cbScan.Location = new System.Drawing.Point(59, 45);
             this.cbScan.Name = "cbScan";
             this.cbScan.Size = new System.Drawing.Size(121, 21);
             this.cbScan.TabIndex = 126;
             // 
             // bShowScan
             // 
-            this.bShowScan.Location = new System.Drawing.Point(553, 24);
+            this.bShowScan.Location = new System.Drawing.Point(105, 129);
             this.bShowScan.Name = "bShowScan";
             this.bShowScan.Size = new System.Drawing.Size(75, 23);
             this.bShowScan.TabIndex = 125;
@@ -1269,7 +1233,7 @@
             // 
             this.label32.AutoSize = true;
             this.label32.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label32.Location = new System.Drawing.Point(15, 306);
+            this.label32.Location = new System.Drawing.Point(15, 278);
             this.label32.Name = "label32";
             this.label32.Size = new System.Drawing.Size(74, 13);
             this.label32.TabIndex = 142;
@@ -1282,28 +1246,52 @@
             this.cbFizDocСitizen.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.cbFizDocСitizen.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.cbFizDocСitizen.FormattingEnabled = true;
-            this.cbFizDocСitizen.Location = new System.Drawing.Point(18, 321);
+            this.cbFizDocСitizen.Location = new System.Drawing.Point(18, 293);
             this.cbFizDocСitizen.Name = "cbFizDocСitizen";
             this.cbFizDocСitizen.Size = new System.Drawing.Size(203, 21);
             this.cbFizDocСitizen.TabIndex = 141;
             this.cbFizDocСitizen.DropDownClosed += new System.EventHandler(this.cbFizDocСitizen_DropDownClosed);
             this.cbFizDocСitizen.KeyDown += new System.Windows.Forms.KeyEventHandler(this.cbFizDocСitizen_KeyDown);
             // 
-            // cb_refugee
+            // deDocDate
             // 
-            this.cb_refugee.AutoSize = true;
-            this.cb_refugee.Location = new System.Drawing.Point(18, 391);
-            this.cb_refugee.Name = "cb_refugee";
-            this.cb_refugee.Size = new System.Drawing.Size(71, 17);
-            this.cb_refugee.TabIndex = 151;
-            this.cb_refugee.Text = "Беженец";
-            this.cb_refugee.UseVisualStyleBackColor = true;
+            this.deDocDate.FormattingEnabled = true;
+            this.deDocDate.InputChar = '*';
+            this.deDocDate.Location = new System.Drawing.Point(108, 46);
+            this.deDocDate.MaxLength = 10;
+            this.deDocDate.Name = "deDocDate";
+            this.deDocDate.Size = new System.Drawing.Size(90, 21);
+            this.deDocDate.TabIndex = 3;
+            this.deDocDate.Enter += new System.EventHandler(this.cbDocUnit_Enter);
+            this.deDocDate.KeyDown += new System.Windows.Forms.KeyEventHandler(this.cbDocUnit_KeyDown);
+            // 
+            // deJournalDate
+            // 
+            this.deJournalDate.FormattingEnabled = true;
+            this.deJournalDate.InputChar = '*';
+            this.deJournalDate.Location = new System.Drawing.Point(108, 6);
+            this.deJournalDate.MaxLength = 10;
+            this.deJournalDate.Name = "deJournalDate";
+            this.deJournalDate.Size = new System.Drawing.Size(90, 21);
+            this.deJournalDate.TabIndex = 1;
+            this.deJournalDate.KeyDown += new System.Windows.Forms.KeyEventHandler(this.cbDocUnit_KeyDown);
+            // 
+            // deBirth
+            // 
+            this.deBirth.FormattingEnabled = true;
+            this.deBirth.InputChar = '*';
+            this.deBirth.Location = new System.Drawing.Point(532, 200);
+            this.deBirth.MaxLength = 10;
+            this.deBirth.Name = "deBirth";
+            this.deBirth.Size = new System.Drawing.Size(95, 21);
+            this.deBirth.TabIndex = 17;
+            this.deBirth.KeyDown += new System.Windows.Forms.KeyEventHandler(this.cbDocUnit_KeyDown);
             // 
             // DocumentForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(664, 770);
+            this.ClientSize = new System.Drawing.Size(887, 638);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
@@ -1380,7 +1368,6 @@
         private System.Windows.Forms.ComboBox cbFizDocType;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ComboBox cbAddrCountry;
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox tbFizBirthPlace;
         private System.Windows.Forms.Label label28;
@@ -1427,7 +1414,6 @@
         private System.Windows.Forms.Label label36;
         private System.Windows.Forms.Label label38;
         private System.Windows.Forms.TextBox tbFizDocCitizenOther;
-        private System.Windows.Forms.GroupBox gbDocInfo;
         private System.Windows.Forms.ComboBox cbOtherDocTypes;
         private System.Windows.Forms.Label label39;
         private System.Windows.Forms.GroupBox gbResidenceValidity;
@@ -1439,5 +1425,6 @@
         private System.Windows.Forms.Label label34;
         private System.Windows.Forms.GroupBox gbDocParams;
         private System.Windows.Forms.CheckBox cb_refugee;
+        private System.Windows.Forms.GroupBox gbDocInfo;
     }
 }

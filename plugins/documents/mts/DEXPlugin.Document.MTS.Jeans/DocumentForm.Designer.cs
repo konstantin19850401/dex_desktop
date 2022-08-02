@@ -119,6 +119,7 @@
             this.chDulIsCorrect = new System.Windows.Forms.CheckBox();
             this.label33 = new System.Windows.Forms.Label();
             this.tb_balance = new System.Windows.Forms.TextBox();
+            this.cb_elSign = new System.Windows.Forms.CheckBox();
             this.panel2.SuspendLayout();
             this.gbScan.SuspendLayout();
             this.SuspendLayout();
@@ -1052,11 +1053,22 @@
             this.tb_balance.Size = new System.Drawing.Size(111, 20);
             this.tb_balance.TabIndex = 353;
             // 
+            // cb_elSign
+            // 
+            this.cb_elSign.AutoSize = true;
+            this.cb_elSign.Location = new System.Drawing.Point(406, 564);
+            this.cb_elSign.Name = "cb_elSign";
+            this.cb_elSign.Size = new System.Drawing.Size(137, 17);
+            this.cb_elSign.TabIndex = 354;
+            this.cb_elSign.Text = "Электронная подпись";
+            this.cb_elSign.UseVisualStyleBackColor = true;
+            // 
             // DocumentForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(556, 626);
+            this.Controls.Add(this.cb_elSign);
             this.Controls.Add(this.tb_balance);
             this.Controls.Add(this.label33);
             this.Controls.Add(this.chDulIsCorrect);
@@ -1246,5 +1258,6 @@
         public DEXExtendLib.DateEdit deDocDate;
         private System.Windows.Forms.Label label33;
         private System.Windows.Forms.TextBox tb_balance;
+        private System.Windows.Forms.CheckBox cb_elSign;
     }
 }

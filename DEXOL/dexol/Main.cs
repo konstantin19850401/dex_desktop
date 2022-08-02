@@ -423,6 +423,7 @@ namespace dexol
                 if (doc.NewDocument((object)toolbox, newdoc))
                 {
                     newdoc.documentStatus = int.Parse(toolbox.UserProperties["DefaultDocumentState"].Text);
+                    newdoc.documentStatus = newdoc.documentStatus > DEXToolBox.DOCUMENT_UNAPPROVED ? DEXToolBox.DOCUMENT_UNAPPROVED : newdoc.documentStatus; 
                     //newdoc.documentStatus = newdoc.documentStatus;
 
 
@@ -543,7 +544,8 @@ namespace dexol
 
                                 if (doc.EditDocument(toolbox, olddoc, newdoc, null, olddoc.documentStatus == DEXToolBox.DOCUMENT_EXPORTED))
                                 {
-                                    if (newdoc.documentStatus > DEXToolBox.DOCUMENT_TOEXPORT) newdoc.documentStatus = DEXToolBox.DOCUMENT_TOEXPORT;
+
+                                    if (newdoc.documentStatus > DEXToolBox.DOCUMENT_APPROVED) newdoc.documentStatus = DEXToolBox.DOCUMENT_APPROVED;
 
                                     // Проверка criticals
                                     if (newdoc.documentStatus > DEXToolBox.DOCUMENT_DRAFT)
@@ -560,6 +562,8 @@ namespace dexol
                                             MessageBox.Show("Выявлены совпадения с другими документами.\nСтатус документа понижен.");
                                         }
                                     }
+
+                                    
 
                                     JObject json = new JObject();
                                     json["action"] = "edit";

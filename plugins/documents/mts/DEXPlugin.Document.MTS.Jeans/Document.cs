@@ -1020,6 +1020,7 @@ namespace DEXPlugin.Document.MTS.Jeans
             ret["AddrCity"] = "Город";
             ret["AddrApartment"] = "Квартира";
             ret["AddrHouse"] = "Дом";
+            ret["ElSign"] = "Электронная подпись";
 
             return ret;
         }

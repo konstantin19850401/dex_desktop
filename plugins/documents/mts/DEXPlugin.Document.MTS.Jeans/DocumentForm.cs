@@ -310,7 +310,14 @@ namespace DEXPlugin.Document.MTS.Jeans
                     } catch (Exception) 
                     {
                     }
-                   
+
+
+                    try
+                    {
+                        cb_elSign.Checked = int.Parse(xml.GetNodeByPath("ElSign", true).Text) == 0 ? false : true;
+                    }
+                    catch (Exception) { }
+
 
 
                     if ( int.Parse(xml.GetNodeByPath("DocCategory", true).Text) == 0 )
@@ -439,6 +446,12 @@ namespace DEXPlugin.Document.MTS.Jeans
             catch (Exception) {
                 xml["Control"].Text = "0";
             }
+
+            try
+            {
+                xml["ElSign"].Text = cb_elSign.Checked == true ? "1" : "0";
+            }
+            catch (Exception) { }
 
             try
             {
@@ -721,6 +734,8 @@ namespace DEXPlugin.Document.MTS.Jeans
                     {
                     }
                 }
+
+
 
                 Dictionary<string, string> dic = new Dictionary<string, string>();
                 dic["zip"] = tbAddrZip.Text;

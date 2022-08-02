@@ -454,6 +454,9 @@ namespace DEXPlugin.Document.Beeline.DOL2.Contract
                 else if (!DOL2Data.CheckString(xml["LastName"].Text.Trim(), true, false))
                     ret.Add("Фамилия абонента не должна содержать цифры");
 
+
+                if (xml["SecondName"].Text.Trim().Length < 1)
+                    ret.Add("Не указано отчество абонента");
                 if (!DOL2Data.CheckString(xml["SecondName"].Text.Trim(), true, false))
                     ret.Add("Отчество абонента не должно содержать цифры");
 

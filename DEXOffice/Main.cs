@@ -3374,7 +3374,7 @@ namespace DEXOffice
                     }
                 }
 
-                string idsText = "";
+                //string idsText = "";
                 List<string> idsList = new List<string>();
                 //int counter = 0;
                 foreach (DataGridViewRow r in dgvJournal.SelectedRows)
